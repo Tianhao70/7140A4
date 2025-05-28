@@ -1,0 +1,16 @@
+/* Layout */
+
+.container {
+    height: 100vh; 
+    width: 80vw;             /* 80% of the viewport width */
+    margin: 0 auto;          /* Centers the container horizontally */
+    /* background-color: lightgreen; */  /* <--- 已注释掉或直接删除此行 */
+}
+
+/* 针对大屏幕（例如平板或桌面电脑）的样式 */
+@media (min-width: 768px) {
+    .container {
+        width: 60vw;         /* 将宽度调整为视口宽度的 60% */
+    }
+    /* 在这里添加只在大屏幕上生效的 CSS 规则 */
+}

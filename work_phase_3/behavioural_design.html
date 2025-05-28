@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/page_css/behavioural_design.css" />
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <title>Behavioural Design - Style Guide</title>
+</head>
+<body>
+    <nav id="nav-mobile" aria-label="Main Navigation">
+        <ul>
+            <li><a href="index.html"><span class="icon">🏠</span></a></li>
+            <li><a href="site_map.html"><span class="icon">🗺️</span></a></li>
+            <li><a href="style_guide.html" aria-current="page"><span class="icon">🎨</span></a></li>
+            <li><a href="ethical_response.html"><span class="icon">🤔</span></a></li>
+            <li><a href="genai_mt_acknowledgement.html"><span class="icon">🤖</span></a></li>
+        </ul>
+    </nav>
+
+    <nav id="nav-desktop" aria-label="Main Navigation">
+        <ul>
+            <li><a href="index.html">WP3 Home</a></li>
+            <li><a href="site_map.html">Site Map</a></li>
+            <li><a href="style_guide.html" aria-current="page">Style Guide</a></li>
+            <li><a href="ethical_response.html">Ethics Response</a></li>
+            <li><a href="genai_mt_acknowledgement.html">GenAI</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h1>Behavioural Design</h1>
+
+            <nav aria-label="Breadcrumb" class="breadcrumb-nav mb-3">
+                <ol class="breadcrumbs">
+                    <li><a href="style_guide.html">Style Guide</a></li>
+                    <li><span aria-current="page">Behavioural Design</span></li>
+                </ol>
+            </nav>
+
+            <p class="mt-3 mb-4">
+                The focus of this section of the Style Guide is ensuring user needs for usability and function are supported. We detail how the design facilitates effective and pleasurable interaction, aligning with behavioural design principles and accessibility standards. This involves demonstrating key interactive components and explaining the design rationale behind them.
+            </p>
+
+            <section id="links-section" class="behavioural-component mt-5">
+                <h2>Links</h2>
+                <p>This section details the styling and behaviour of hyperlinks across the "Global Roots Community" website, ensuring they are discoverable, provide clear feedback, and meet accessibility requirements (WCAG 2.4.4 Link Purpose).</p>
+                <p class="annotation mt-2">
+                    <strong>Annotation:</strong> Links are designed for clear discoverability and interaction feedback, adhering to Norman's principles. The default state uses a distinct color (var(--color-primary)) as a primary Signifier. The hover state introduces an underline and color change, providing immediate visual Feedback that the element is interactive. The focus state incorporates a visible outline (WCAG 2.4.7 Focus Visible), crucial for keyboard navigation accessibility. The active state provides momentary Feedback during activation. Link text must be descriptive to meet WCAG 2.4.4 (Link Purpose).
+                </p>
+                <div class="component-example mt-3">
+                    <h4>Example Link States (Visual Mock-ups):</h4>
+                    <div class="link-state-container">
+                        <div>
+                            <h5>Default State:</h5>
+                            <img src="assets/Default Link.png" alt="Default link state showing blue text 'Sample Text Link'">
+                        </div>
+                        <div>
+                            <h5>Hover State:</h5>
+                        <img src="assets/Hover link.png" alt="Hover link state showing pinkish-red underlined text 'Sample Text Link'">
+                        </div>
+                        <div>
+                            <h5>Focus State:</h5>
+                            <img src="assets/Focus Link.png" alt="Focus link state showing blue text 'Sample Text Link' with a light blue outline.">
+                        </div>
+                        <div>
+                            <h5>Active State:</h5>
+                            <img src="assets/Active Link.png" alt="Active link state showing pinkish-red underlined text 'Sample Text Link' with a light blue outline.">
+                        </div>
+                    </div>
+                    <p class="mt-3"><small><em>(Actual link styling and states implemented via CSS in base.css or components.css)</em></small></p>
+                </div>
+            </section>
+
+            <section id="navigation-section" class="behavioural-component mt-5">
+                <h2>Menus & Navigation</h2>
+                <p>Defines the structure and interaction patterns for the site's navigation systems, aiming to help users understand their location, explore effectively, and find information easily, adhering to principles like Consistent Navigation (WCAG 3.2.3).</p>
+                <p class="annotation mt-2">
+                    <strong>Annotation:</strong>
+                    The proposed navigation aims for clarity and ease of access. For mobile (see mock-up below), a bottom navigation bar provides immediate access to core actions (Menu, Create, Share, Search), enhancing Discoverability. The hamburger menu icon acts as a Signifier for additional options, revealed in an overlay ('Menu expansion' mock-up). This overlay groups related functions logically (e.g., Account, Settings, Accessibility), supporting the user's Conceptual Model. Desktop navigation (prototyped in `components.css` via `#nav-desktop` for this style guide site, final design may vary) uses a consistent top bar. Active states (`aria-current="page"`) provide Feedback on location. Consistent placement and behaviour across the final site will adhere to WCAG 3.2.3. Accessibility for the proposed mobile menu requires the hamburger button to have `aria-expanded` state management and appropriate labels for icon-only buttons.
+                </p>
+                <div class="component-example mt-3">
+                    <h4>Example Proposed Mobile Navigation (Visual Mock-ups):</h4>
+                <div class="nav-example-container">
+                        <div>
+                            <h5>Mobile Bottom Bar:</h5>
+                            <img src="assets/Navigation Bar_Mobile.png" alt="Mock-up of a mobile bottom navigation bar with icons for Menu, Create (central button), Share, and Search.">
+                            <p><small>Provides quick access to primary actions.</small></p>
+                        </div>
+                        <div>
+                            <h5>Expanded Menu Overlay:</h5>
+                            <img src="assets/Menu expansion.png" alt="Mock-up of an expanded mobile menu showing options for Profile, Messages, Accessibility, About Us, Account, and Settings, each with an icon.">
+                            <p><small>Accessed via the menu icon, offering secondary navigation and user-specific options.</small></p>
+                        </div>
+                    </div>
+                      <p class="mt-3"><small><em>(Note: The actual navigation bars on *this* style guide page (`#nav-mobile`, `#nav-desktop`) demonstrate the implementation for the guide itself and may differ from the proposed final website design shown above.)</em></small></p>
+                </div>
+            </section>
+
+            <section id="cards-section" class="behavioural-component mt-5">
+                <h2>Cards</h2>
+                <p>Cards are used to group related content snippets (like community topics/posts or replies) into digestible, self-contained units. This section shows the standard card layouts and interaction.</p>
+                <p class="annotation mt-2">
+                    <strong>Annotation:</strong> Cards use consistent layouts to aid scannability and support the user's Conceptual Model (e.g., post previews include author, title, preview, and action). Clear visual hierarchy within cards prevents information overload (Constraints). Specific elements like the "View" button serve as clear Signifiers for action. Hover/focus states (to be defined in CSS) should provide Feedback. Semantic HTML structure (e.g., using `<article>` for posts) supports WCAG 1.3.2 (Meaningful Sequence). These card designs directly address the user need to easily browse and access shared experiences and replies within the community forum.
+                </p>
+                <div class="component-example mt-3">
+                    <h4>Example Card Layouts (Visual Mock-ups):</h4>
+                    <div class="card-example-container">
+                        <div>
+                            <h5>Post Card Example:</h5>
+                            <img src="assets/Post Card.png" alt="Wireframe of a Post Card component, showing user avatar, username, content area, title, description, and View button.">
+                            <p><small>Represents a summary of a user-generated post or topic.</small></p>
+                        </div>
+                        <div>
+                            <h5>Reply Card Example:</h5>
+                            <img src="assets/Reply Card.png" alt="Wireframe of a Reply Card component, showing numbered replies with content placeholders.">
+                            <p><small>Represents individual replies within a discussion thread.</small></p>
+                        </div>
+                    </div>
+                    <p class="mt-3"><small><em>(Actual card styling and hover/focus states should be defined in CSS.)</em></small></p>
+                </div>
+            </section>
+
+            <section id="icons-section" class="behavioural-component mt-5">
+                <h2>Icons</h2>
+                <p>Icons are used sparingly to reinforce meaning and guide actions. This section defines the icon style and usage guidelines, ensuring clarity and accessibility (WCAG 1.1.1 Non-text Content).</p>
+                <p class="annotation mt-2">
+                    <strong>Annotation:</strong>
+                    A consistent icon set enhances usability and brand identity (Consistency). We aim for clear, universally understood symbols where possible (Signifiers, Mapping). Icons used for actions are typically paired with text labels for clarity. For icon-only buttons (like 'Edit' or 'Log out' shown below), an `aria-label` is crucial for screen reader users (WCAG 1.1.1). Recognizable brand icons (Google, Apple, Facebook) are used for third-party logins to leverage existing user familiarity (Conceptual Model).
+                    <br><em>Note: A final implementation would ideally use a single, consistent icon library (e.g., SVG icons or an icon font) for visual coherence and performance. These examples demonstrate usage principles.</em>
+                </p>
+                <div class="component-example mt-3">
+                    <h4>Example Icon Usage (Live HTML & CSS):</h4>
+                    <p><strong>Icons Paired with Text:</strong></p>
+                    <button class="button button-secondary mb-2">
+                        <img src="assets/Google.png" alt="" class="icon-inline" aria-hidden="true">
+                        Log in with Google
+                    </button>
+                    <br>
+                    <button class="button button-dark mb-2">
+                        <img src="assets/Apple.png" alt="" class="icon-inline" aria-hidden="true">
+                        Log in with Apple
+                    </button>
+                    <br>
+                    <button class="button button-primary mb-2">
+                        <img src="assets/Facebook.png" alt="" class="icon-inline" aria-hidden="true">
+                        Log in with Facebook
+                    </button>
+
+                    <p class="mt-4"><strong>Icon-Only Buttons (Accessibility Critical):</strong></p>
+                    <button class="button button-secondary icon-button" aria-label="Edit Profile">
+                        <img src="assets/Edit.png" alt="">
+                    </button>
+                    <button class="button button-danger ml-2 icon-button" aria-label="Log out">
+                        <img src="assets/Log out.png" alt="">
+                    </button>
+
+                    <p class="mt-4"><strong>Icon Enhancing Text:</strong></p>
+                    <a href="#logout" class="button button-dark">
+                        <img src="assets/Log out.png" alt="" class="icon-inline" aria-hidden="true">
+                        Log Out Now
+                    </a>
+                </div>
+            </section>
+
+            <section id="buttons-section" class="behavioural-component mt-5">
+                <h2>Buttons</h2>
+                <p>Details the design and interaction states for primary and secondary call-to-action buttons, ensuring clear affordance and feedback while meeting accessibility contrast requirements (WCAG 1.4.1 Use of Color, 1.4.11 Non-text Contrast).</p>
+                <p class="annotation mt-2">
+                    <strong>Annotation:</strong> Buttons have clear visual cues (background color, padding) indicating clickability (Affordance/Signifier). Hover, focus, active (pressed), and disabled states (defined in CSS) provide distinct Feedback and manage Constraints. Labels clearly describe the action (e.g., "Submit", "Create Post"). Sufficient color contrast is maintained (WCAG 1.4.3, 1.4.11). Keyboard focus styles ensure visibility (WCAG 2.4.7).
+                </p>
+                <div class="component-example mt-3">
+                    <h4>Example Button Styles & States (Live HTML & CSS):</h4>
+                    <div class="mb-4 p-3" style="border: 1px solid #eee; border-radius: 4px;">
+                        <h5>Primary Button</h5>
+                        <p class="mb-2"><small>Main call-to-action button.</small></p>
+                        <button class="button button-primary">Primary Action</button>
+                        <button class="button button-primary ml-2" disabled>Disabled Primary</button>
+                        <p class="mt-2"><small><em>Hover, Focus, and Active states are defined in CSS. Interact with the enabled button to see them.</em></small></p>
+                        <p class="annotation mt-2" style="font-size: 0.9rem; background: none; border-left: none; padding-left: 0;">
+                            <strong>Annotation Snippet:</strong> The primary button uses a prominent color (var(--color-primary)) for high visibility (Signifier), guiding users towards the main action. State changes provide clear Feedback.
+                        </p>
+                    </div>
+                    <div class="mb-4 p-3" style="border: 1px solid #eee; border-radius: 4px;">
+                        <h5>Secondary Button</h5>
+                        <p class="mb-2"><small>Alternative or less critical actions.</small></p>
+                        <button class="button button-secondary">Secondary Action</button>
+                        <button class="button button-secondary ml-2" disabled>Disabled Secondary</button>
+                        <p class="mt-2"><small><em>Hover, Focus, and Active states are defined in CSS. Interact with the enabled button to see them.</em></small></p>
+                        <p class="annotation mt-2" style="font-size: 0.9rem; background: none; border-left: none; padding-left: 0;">
+                            <strong>Annotation Snippet:</strong> The secondary button uses a less prominent style, clearly distinguishing it from the primary action but still maintaining affordance. Focus states ensure keyboard accessibility (WCAG 2.4.7).
+                        </p>
+                    </div>
+                    <div class="mb-4 p-3" style="border: 1px solid #eee; border-radius: 4px;">
+                        <h5>Icon-Only Button (Example)</h5>
+                        <p class="mb-2"><small>Used for common actions where space is limited. Requires aria-label.</small></p>
+                        <button class="button button-secondary icon-button" aria-label="Edit Profile">
+                            <img src="assets/Edit.png" alt="">
+                        </button>
+                        <p class="mt-2"><small><em>(Hover, Focus, Active states defined in CSS). See Icons section annotation for accessibility details (WCAG 1.1.1).</em></small></p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="forms-section" class="behavioural-component mt-5">
+                <h2>Forms</h2>
+                <p>Covers the layout, styling, validation, and feedback mechanisms for form inputs, aiming to reduce user effort and prevent errors (WCAG 3.3.2 Labels or Instructions). This example form interacts with the Community API.</p>
+                <p class="annotation mt-2">
+                    <strong>Annotation:</strong> This form demonstrates collecting user data (Name, Email, Message, Photo) to submit to the `/api/community` endpoint. It uses a clear, single-column layout. All inputs have visible `<label>` elements linked via `for` (WCAG 3.3.2). Helper text uses `aria-describedby`. Input types (`text`, `email`, `file`) and `required` attributes enforce Constraints and enable browser validation. The form includes `enctype="multipart/form-data"` for file uploads. The `behavioural_design.js` script handles the FETCH POST request, including required headers, and provides user Feedback via the `#form-status-message` element (using `aria-live="polite"`) based on the API response (Success/Error). Error prevention is aided by clear labelling and validation.
+                </p>
+                <div class="component-example mt-3">
+                    <h4>Example Community Signup Form (Live HTML, CSS & JS):</h4>
+                    <form id="example-form" novalidate enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name (Required):</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                            <span class="validation-message" id="name-validation"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address (Required):</label>
+                            <input type="email" id="email" name="email" class="form-control" required aria-describedby="email-help">
+                            <div id="email-help" class="form-text">We'll never share your email. Valid email format required.</div>
+                            <span class="validation-message" id="email-validation"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message/Introduction (Optional):</label> <textarea id="message" name="message" class="form-control" rows="3" aria-describedby="message-help"></textarea> <div id="message-help" class="form-text">Tell us something about yourself!</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="photo" class="form-label">Profile Photo (Optional, Max 10MB):</label>
+                            <input type="file" id="photo" name="photo" class="form-control" accept="image/*" aria-describedby="photo-help"> <div id="photo-help" class="form-text">Upload a profile picture (JPG, PNG, GIF).</div>
+                        </div>
+                        <button type="submit" class="button button-primary">Join the Community</button>
+                        <div id="form-status-message" class="mt-3" aria-live="polite"></div>
+                    </form>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script type="module" src="js/behavioural_design.js" defer></script>
+</body>
+</html>

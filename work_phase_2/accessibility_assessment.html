@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Accessibility Assessment for the Connected Communities Initiative (CCI) website, focusing on WCAG 2.2 AA compliance, part of DECO7140 Work Phase 2." />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <title>WP2 - Accessibility Assessment</title>
+    <style>
+        /* Add some specific styles for this page if needed, or ensure components.css/base.css cover them */
+        .assessment-section {
+            margin-bottom: var(--space-4); /* Use spacing variable from layout.css */
+        }
+        .assessment-section h3 {
+            margin-top: var(--space-3);
+            padding-top: var(--space-2);
+            border-top: 1px solid var(--secondary-color, #ccc); /* Match h3 style in base.css but maybe use secondary color */
+            margin-bottom: var(--space-2);
+        }
+        .assessment-section h4 {
+            font-size: 1.4rem; /* Slightly smaller than h3 */
+            font-weight: 700;
+            color: var(--primary-color); /* Use primary color */
+            margin-top: var(--space-3);
+            margin-bottom: var(--space-1);
+        }
+        .assessment-section ul {
+            list-style: disc; /* Ensure default bullets are visible */
+            margin-left: var(--space-4); /* Indent list */
+            margin-bottom: var(--space-2);
+        }
+        .assessment-section li {
+            margin-bottom: var(--space-1);
+            line-height: 1.5; /* Improve readability */
+        }
+        .assessment-section code {
+            background-color: #eee;
+            padding: 0.1em 0.4em;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        .wcag-level {
+            font-weight: bold;
+            color: var(--secondary-color); /* Use secondary color for emphasis */
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="client_needs_analysis.html">Client Needs Analysis</a></li>
+            <li><a href="user_stories.html">User Stories</a></li>
+            <li><a href="accessibility_assessment.html" aria-current="page">Accessibility Assessment</a></li>
+            <li><a href="ethics_analysis.html">Ethics Analysis</a></li>
+            <li><a href="genai_mt_acknowledgement.html">GenAI/MT Acknowledgement</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Tianhao's Work Phase 2</h1>
+        </header>
+
+        <main>
+            <section class="assessment-section">
+                <h2>Accessibility Assessment</h2>
+
+                <h3 class="m-t-4">1. Introduction & Commitment</h3>
+                <p>
+                    This assessment outlines the commitment and planned approach to ensuring the Connected Communities Initiative (CCI) website is accessible to all users, including those with disabilities. Accessibility is a core requirement outlined in the Client Brief and aligns with CCI's mission of inclusivity.
+                </p>
+                <p>
+                    The target standard for this project is the <strong class="wcag-level">Web Content Accessibility Guidelines (WCAG) 2.2 Level AA</strong>. Meeting this standard ensures a robust, usable, and equitable experience for diverse audiences, including international students, migrants, and local Australians engaging with the platform.
+                </p>
+
+                <h3 class="m-t-4">2. Assessment Methodology</h3>
+                <p>
+                    The accessibility assessment will be an ongoing process throughout the design and development phases (Work Phase 3 & 4), employing a combination of methods:
+                </p>
+                <ul>
+                    <li><strong>Guideline Adherence:</strong> Directly referencing the <a href="https://www.w3.org/WAI/WCAG22/quickref/" target="_blank" rel="noopener noreferrer">WCAG 2.2 Quick Reference Guide</a> to understand and implement specific Success Criteria (SC) for Level AA.</li>
+                    <li><strong>Framework Application:</strong> Structuring the assessment around the four core principles of WCAG: Perceivable, Operable, Understandable, and Robust (POUR).</li>
+                    <li><strong>Manual Testing:</strong>
+                        <ul>
+                            <li>Keyboard Navigation: Ensuring all interactive elements (links, buttons, form controls, custom components) are reachable and operable using only the keyboard, with a clear visible focus indicator.</li>
+                            <li>Screen Reader Simulation: Using tools like NVDA, VoiceOver, or JAWS to check content structure, semantic meaning, alternative text for images, and ARIA announcements.</li>
+                            <li>Zoom & Reflow: Testing page layout and readability when zoomed up to 200%.</li>
+                            <li>Contrast Check: Verifying text and UI elements meet required contrast ratios.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Automated Tools (Auxiliary):</strong> Potentially using browser extensions (e.g., WAVE, Axe DevTools) or online checkers for initial scans and identifying common issues, understanding these tools are supplementary to manual checks.</li>
+                    <li><strong>Code Review:</strong> Ensuring the use of semantic HTML, correct ARIA implementation where necessary, and valid code.</li>
+                </ul>
+
+                <h3 class="m-t-4">3. Assessment Based on WCAG 2.2 AA Principles (POUR)</h3>
+                <p>The following outlines key considerations under each WCAG principle relevant to this project:</p>
+
+                <h4>Perceivable</h4>
+                <p><em>Information and user interface components must be presentable to users in ways they can perceive.</em></p>
+                <ul>
+                    <li><strong>1.1 Text Alternatives:</strong> All meaningful images, icons, and other non-text content will have appropriate text alternatives (e.g., <code>alt</code> attributes for images). Decorative elements will be marked appropriately (<code>alt=""</code>) to be ignored by assistive technology. (WCAG 1.1.1 - Level A)</li>
+                    <li><strong>1.3 Adaptable:</strong> Content will be structured using semantic HTML (<code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;h1&gt;-&lt;h6&gt;</code>, <code>&lt;ul&gt;</code>, etc.) to ensure a logical reading order and structure understandable by assistive technologies. (WCAG 1.3.1, 1.3.2 - Level A)</li>
+                    <li><strong>1.4 Distinguishable:</strong>
+                        <ul>
+                            <li>Color will not be used as the sole means of conveying information (e.g., links will have visual indicators beyond color). (WCAG 1.4.1 - Level A)</li>
+                            <li>Text and background colors will meet the <span class="wcag-level">AA contrast ratio</span> of 4.5:1 for normal text and 3:1 for large text. (WCAG 1.4.3 - Level AA)</li>
+                            <li>Text will be resizable up to 200% without loss of content or functionality, using relative units (rem, em) for text sizing. (WCAG 1.4.4 - Level AA)</li>
+                            <li>Content reflow will be managed for smaller viewports and zoomed views. (WCAG 1.4.10 - Level AA)</li>
+                            <li>Sufficient contrast for non-text elements (UI components, graphics) will be ensured. (WCAG 1.4.11 - Level AA)</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>Operable</h4>
+                <p><em>User interface components and navigation must be operable.</em></p>
+                <ul>
+                    <li><strong>2.1 Keyboard Accessible:</strong> All functionality will be operable via a keyboard interface. No keyboard traps will exist. (WCAG 2.1.1, 2.1.2 - Level A)</li>
+                    <li><strong>2.4 Navigable:</strong>
+                        <ul>
+                            <li>A mechanism to bypass blocks of content (e.g., "Skip to main content" link) will be considered. (WCAG 2.4.1 - Level A)</li>
+                            <li>Page titles (<code>&lt;title&gt;</code>) will be clear and descriptive. (WCAG 2.4.2 - Level A)</li>
+                            <li>Focus order will be logical and preserve meaning. (WCAG 2.4.3 - Level A)</li>
+                            <li>The purpose of links will be clear from the link text alone or programmatically determined context. (WCAG 2.4.4 - Level A)</li>
+                            <li>Multiple ways to navigate the site (e.g., navigation menu, site map, search if implemented) will be considered. (WCAG 2.4.5 - Level AA)</li>
+                            <li>Headings and labels will describe topic or purpose. (WCAG 2.4.6 - Level AA)</li>
+                            <li>Keyboard focus will be clearly visible and discernible. Default focus indicators will not be removed without a clear replacement. (WCAG 2.4.7 - Level AA)</li>
+                            <li>Focus appearance will have sufficient contrast and thickness. (WCAG 2.4.11 - Level AA)</li>
+                            <li>Any focus not obscured by other content will be ensured. (WCAG 2.4.12, 2.4.13 - Level AA)</li>
+                        </ul>
+                    </li>
+                    <li><strong>2.5 Input Modalities:</strong> Ensure functionality can be operated via various inputs beyond keyboard (relevant for potential PWA features). Target sizes for pointer inputs will be sufficient. (WCAG 2.5.5, 2.5.8 - Level AA)</li>
+                </ul>
+
+                <h4>Understandable</h4>
+                <p><em>Information and the operation of user interface must be understandable.</em></p>
+                <ul>
+                    <li><strong>3.1 Readable:</strong>
+                        <ul>
+                            <li>The primary language of the page (English) will be programmatically set (<code>&lt;html lang="en"&gt;</code>).</li>
+                            <li>Content will be written as clearly and simply as possible, avoiding jargon where feasible, aligning with user needs for simple English. (WCAG 3.1.5 - Level AAA, aiming for best practice here).</li>
+                            <li>Mechanisms for identifying definitions of unusual words or abbreviations will be considered if necessary. (WCAG 3.1.3, 3.1.4 - Level AAA)</li>
+                        </ul>
+                    </li>
+                    <li><strong>3.2 Predictable:</strong>
+                        <ul>
+                            <li>Navigation menus will be consistent across pages. (WCAG 3.2.3 - Level AA)</li>
+                            <li>UI components used repeatedly will be identified consistently. (WCAG 3.2.4 - Level AA)</li>
+                        </ul>
+                    </li>
+                    <li><strong>3.3 Input Assistance:</strong>
+                        <ul>
+                            <li>Errors in forms (like the newsletter signup or potential dynamic feature inputs) will be clearly identified, described in text, and suggestions for correction provided where possible. (WCAG 3.3.1 - Level A)</li>
+                            <li>Labels and instructions will be provided for user inputs. (WCAG 3.3.2 - Level A)</li>
+                            <li>Error prevention mechanisms (e.g., confirming submissions for critical actions) will be implemented where appropriate. (WCAG 3.3.4 - Level AA for critical errors)</li>
+                            <li>Redundant entry will be minimized where feasible. (WCAG 3.3.7 - Level A)</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>Robust</h4>
+                <p><em>Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies.</em></p>
+                <ul>
+                    <li><strong>4.1 Compatible:</strong>
+                        <ul>
+                            <li>Code (HTML, CSS) will validate against specifications where possible.</li>
+                        <li>Elements will have complete start/end tags, be nested correctly, and avoid duplicate IDs.</li>
+                            <li>ARIA attributes will be used correctly to enhance accessibility for custom controls or dynamic content updates, supplementing (not replacing) native HTML semantics where appropriate. Status messages providing feedback without interrupting the user will use appropriate techniques (e.g. ARIA live regions). (WCAG 4.1.1, 4.1.2 - Level A, 4.1.3 - Level AA)</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3 class="m-t-4">4. Specific Component Considerations</h3>
+                <p>Key components from the current design will be specifically reviewed:</p>
+                <ul>
+                    <li><strong>Navigation Menu (`.navbar`):</strong> Ensure full keyboard operability (toggle, links), visible focus states, correct use of `aria-current="page"`, and potentially `aria-expanded` on the toggle button managed via JavaScript (`js/index.js` likely).</li>
+                    <li><strong>Flip Cards (`.flip-card`):** Check keyboard activation (currently uses `:focus-visible`), ensure content is accessible to screen readers in both states, verify meaningful `aria-label` for context.</li>
+                    <li><strong>Interactive Highlights (`.interactive-highlight`, `.interactive-highlight-stories`):** Confirm keyboard focus (`tabindex="0"`). Assess how the tooltip information (currently CSS `::after`) is conveyed to assistive technologies. If `::after` content is not reliably read, alternative techniques (like dynamically shown/hidden elements linked with `aria-describedby`) will be explored.</li>
+                    <li><strong>Interview Transcripts (`.interview` structure):</strong> Ensure logical heading structure (`h5`, `p.question`, `.response`) and list formatting within responses are correctly interpreted by screen readers.</li>

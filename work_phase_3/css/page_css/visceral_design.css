@@ -1,0 +1,324 @@
+/* css/page_css/visceral_design.css */
+
+/* Import skeleton component styles */
+@import '../component_skeletons/gallery.css';
+@import '../component_skeletons/viewer.css';
+
+/* === Breadcrumb Styles (Keep existing or refine as needed) === */
+.breadcrumb-nav {
+    margin-bottom: var(--space-lg, 1.5rem);
+    font-size: 0.9rem;
+}
+.breadcrumbs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.breadcrumbs li {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-text-secondary, #6C757D);
+}
+.breadcrumbs li:not(:last-child)::after {
+    content: '>';
+    margin: 0 0.5em;
+    color: var(--color-text-secondary, #6C757D);
+}
+.breadcrumbs a {
+    color: var(--color-primary, #2D5F34);
+    text-decoration: none;
+}
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+    text-decoration: underline;
+}
+.breadcrumbs span[aria-current="page"] {
+    font-weight: bold;
+    color: var(--color-text, #333333);
+}
+/* === End Breadcrumb Styles === */
+
+/* Page Header Specifics for Visceral Design */
+.page-header.visceral-header { /* More specific selector for the h1 on this page */
+    text-align: center;
+    margin-bottom: var(--space-lg, 1.5rem); /* Consistent spacing */
+}
+.page-header.visceral-header h1 {
+    color: var(--color-primary, #2D5F34); /* Use defined primary color */
+    font-size: var(--font-size-h1, 2.8rem); /* Use H1 size from base.css */
+    margin-bottom: var(--space-sm, 0.5rem);
+    padding-bottom: var(--space-sm, 0.5rem);
+    border-bottom: 3px solid var(--color-accent, #E67E22); /* Use accent color for underline */
+    display: inline-block; /* So border only underlines text */
+}
+.visceral-header .intro-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary, #6C757D);
+    margin-top: var(--space-md, 1rem); /* Space after H1 */
+    margin-bottom: var(--space-xl, 2rem); /* Space before first design section */
+    text-align: center; 
+    max-width: 80ch; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* General Section Styling for Visceral Design Page */
+.design-section {
+    margin-bottom: var(--space-xxl, 3rem); /* Generous space between major sections */
+    padding-top: var(--space-lg, 1.5rem);
+    border-top: 1px solid var(--color-background-subtle, #F2F2F2); /* Use your light gray for subtle separation */
+}
+.design-section:first-of-type {
+    border-top: none;
+    padding-top: 0; /* No top padding/border for the very first section */
+}
+
+.section-title {
+    font-size: var(--font-size-h2, 2.2rem); /* Use H2 size from base.css, adjust if needed */
+    color: var(--color-primary, #2D5F34); 
+    margin-top: 0; 
+    margin-bottom: var(--space-lg, 1.5rem); /* Increased space after title */
+    padding-bottom: var(--space-sm, 0.5rem); 
+    border-bottom: 2px solid var(--color-primary, #2D5F34); 
+    display: flex;
+    align-items: center;
+}
+.section-title .icon-before {
+    margin-right: var(--space-md, 1rem); /* More space for icon */
+    font-size: 0.85em; /* Adjust icon size relative to title */
+    color: var(--color-primary, #2D5F34); 
+}
+
+.section-intro {
+    font-size: 1.1rem; /* Slightly larger intro text for sections */
+    line-height: 1.7;
+    color: var(--color-text-secondary, #6C757D);
+    margin-bottom: var(--space-lg, 1.5rem);
+    max-width: 75ch; /* For better readability */
+}
+
+/* Typography Section Specifics */
+.typography-details {
+    display: grid;
+    gap: var(--space-lg, 1.5rem);
+}
+@media (min-width: 768px) {
+    .typography-details {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+}
+.typography-item {
+    background-color: var(--color-background-subtle, #F2F2F2);
+    padding: var(--space-lg, 1.5rem); /* More padding */
+    border-radius: var(--border-radius-md, 8px); /* Consistent rounded corners */
+    border: 1px solid var(--color-text-secondary, #e0e0e0); /* Softer border */
+}
+.typography-item h3 {
+    font-size: var(--font-size-h3, 1.75rem); /* Consistent H3 size */
+    color: var(--color-text, #333333);
+    margin-top: 0;
+    margin-bottom: var(--space-md, 1rem); /* More space after h3 */
+}
+.typography-item p {
+    margin-bottom: var(--space-sm, 0.5rem); /* Consistent para spacing */
+    font-size: 1rem; 
+    line-height: 1.6;
+}
+.typography-item p:last-child { margin-bottom: 0; }
+.typography-item p strong { font-weight: 700; color: var(--color-text, #333333); }
+
+.typography-example {
+    margin-top: var(--space-md, 1rem); 
+    padding: var(--space-md, 1rem);
+    border: 1px dashed var(--color-text-secondary, #ccc);
+    border-radius: var(--border-radius-sm, 4px); /* Slightly rounded */
+    background-color: #fff; 
+}
+.typography-example h1, .typography-example h2, .typography-example h3 {
+    margin-bottom: var(--space-sm, 0.5rem); 
+}
+.typography-example p {
+    margin-bottom: 0; /* Last p in example has no bottom margin */
+}
+
+/* Color Scheme Section Specifics */
+.color-palette-container {
+    display: grid;
+    gap: var(--space-lg, 1.5rem);
+}
+@media (min-width: 768px) {
+    .color-palette-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    }
+}
+.color-swatch-group h4 {
+    font-size: 1.25rem; /* Clear sub-group titles */
+    color: var(--color-text, #333333);
+    font-weight: 700; /* Bolder */
+    margin-top: var(--space-md, 1rem); 
+    margin-bottom: var(--space-md, 1rem); /* More space */
+    padding-bottom: var(--space-xs, 0.25rem);
+    border-bottom: 1px solid var(--color-text-secondary, #e0e0e0);
+}
+.color-swatch-group:first-child h4 { margin-top: 0; }
+
+.color-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    margin-bottom: var(--space-lg, 1.5rem); /* More space between items */
+    background-color: var(--color-background-subtle, #F2F2F2);
+    padding: var(--space-lg, 1.5rem); /* More padding */
+    border-radius: var(--border-radius-md, 8px); /* Consistent radius */
+    border: 1px solid var(--color-text-secondary, #e0e0e0);
+}
+.color-item .swatch {
+    width: 100%; 
+    height: 80px; /* Larger swatch */
+    border-radius: var(--border-radius-sm, 4px); 
+    margin-bottom: var(--space-md, 1rem); /* More space to text */
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.1); /* Subtle shadow and inset border */
+}
+.color-item p {
+    font-size: 0.95rem; /* Slightly larger text */
+    line-height: 1.5;
+    margin-bottom: 0;
+    width: 100%; 
+}
+.color-item p strong {
+    display: block;
+    font-size: 1.05rem; /* Slightly larger strong text */
+    color: var(--color-text, #333333);
+    margin-bottom: var(--space-xs, 0.25rem);
+    font-weight: 700;
+}
+.color-item p em { 
+    display: block;
+    font-size: 0.9rem; /* Larger emphasis text */
+    color: var(--color-text-secondary, #6C757D);
+    margin-top: var(--space-xs, 0.25rem); /* Space before rationale */
+}
+
+@media (min-width: 500px) { 
+    .color-item {
+        flex-direction: row; 
+        align-items: center;
+    }
+    .color-item .swatch {
+        width: 80px; /* Larger swatch for desktop */
+        height: 80px;
+        margin-right: var(--space-lg, 1.5rem); /* More space */
+        margin-bottom: 0; 
+        flex-shrink: 0;
+    }
+}
+
+/* Imagery Guidelines Section Specifics */
+#imagery-guidelines ul {
+    list-style: disc; 
+    margin-left: var(--space-lg, 1.5rem);
+    margin-bottom: var(--space-md, 1rem);
+}
+#imagery-guidelines ul li {
+    margin-bottom: var(--space-sm, 0.5rem);
+    line-height: 1.7; /* More line height for readability */
+}
+#imagery-guidelines h4 { 
+    font-size: 1.25rem; 
+    color: var(--color-text, #333333);
+    font-weight: 700; /* Bolder */
+    margin-top: var(--space-lg, 1.5rem); 
+    margin-bottom: var(--space-sm, 0.5rem);
+}
+#imagery-guidelines h4:first-of-type {
+    margin-top: var(--space-md, 1rem); 
+}
+#imagery-guidelines ul ul { 
+    margin-top: var(--space-sm, 0.5rem); /* Indent nested lists more */
+    margin-bottom: var(--space-sm, 0.5rem);
+}
+
+/* Navigation Structure Section Specifics */
+#navigation-structure-visceral ul { 
+    list-style: disc; 
+    margin-left: var(--space-lg, 1.5rem);
+}
+#navigation-structure-visceral ul li {
+    margin-bottom: var(--space-sm, 0.5rem);
+    line-height: 1.7; /* More line height */
+}
+
+
+/* General Annotation Style (ensure consistency or refine) */
+.annotation {
+    background-color: color-mix(in srgb, var(--color-accent, #E67E22) 10%, transparent);
+    border-left: 5px solid var(--color-accent, #E67E22); /* Thicker border */
+    padding: var(--space-lg, 1.5rem); /* More padding */
+    margin-top: var(--space-lg, 1.5rem); /* More margin */
+    font-size: 1rem; /* Slightly larger */
+    line-height: 1.7; /* More line height */
+    color: var(--color-text-secondary, #6C757D);
+    border-radius: var(--border-radius-sm, 4px);
+}
+.annotation strong {
+    color: var(--color-text, #333333);
+    font-weight: 700; /* Bolder */
+}
+.annotation a { 
+    color: var(--color-primary, #2D5F34);
+    font-weight: 600; /* Make links in annotations stand out */
+    text-decoration: underline;
+}
+.annotation a:hover { text-decoration: none; }
+
+/* General list-styled (ensure this is your desired style) */
+.list-styled {
+    list-style: none;
+    padding-left: 0;
+}
+.list-styled li {
+    position: relative;
+    padding-left: 2em; /* More space for icon */
+    margin-bottom: var(--space-md, 1rem); /* More space between items */
+    line-height: 1.7;
+}
+.list-styled li::before {
+    content: "\f058"; /* fas fa-check-circle */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900; 
+    position: absolute;
+    left: 0;
+    top: 0.05em; /* Fine-tune vertical alignment */
+    color: var(--color-primary, #2D5F34); 
+    font-size: 1.2em; /* Larger icon */
+}
+
+/* Gallery figcaption improvements (ensure readability and visual appeal) */
+.gallery figcaption {
+    padding: var(--space-md, 1rem); 
+    font-size: 0.95rem; 
+    line-height: 1.6;
+    color: var(--color-text-secondary, #6C757D);
+    background-color: var(--color-background-subtle, #F2F2F2);
+    border-top: 1px solid var(--color-text-secondary, #e0e0e0); 
+}
+.gallery figcaption strong { 
+    color: var(--color-text, #333333);
+    display: block;
+    margin-bottom: var(--space-xs, 0.25rem);
+    font-weight: 700;
+}
+
+/* Viewer caption (ensure readability over image) */
+#viewer-caption {
+    background-color: rgba(0,0,0,0.8); /* Darker, more opaque background */
+    color: white;
+    padding: var(--space-md, 1rem) var(--space-lg, 1.5rem); /* More padding */
+    font-size: 1.05rem; /* Slightly larger */
+    text-align: center;
+    line-height: 1.5;
+}

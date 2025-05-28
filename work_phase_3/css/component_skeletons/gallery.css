@@ -1,0 +1,49 @@
+/* css/component_skeletons/gallery.css */
+
+.gallery {
+    display: grid;
+    /* Mobile first: Creates as many 200px+ columns as fit, often results in 1 or 2 columns */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    place-items: center; /* Centers items in their grid cells */
+    gap: 1.5rem; /* Space between grid items (slightly increased) */
+    margin-bottom: 2rem; /* Space below the gallery */
+}
+
+.gallery img {
+    /* Mobile first styles */
+    width: 80%; /* Image takes 80% of its container width on mobile */
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Scales image to maintain aspect ratio while filling container, crops if needed */
+    object-position: top; /* Aligns the top of the image within the frame */
+    position: relative; /* Needed if you add absolute positioned elements inside later */
+    cursor: pointer; /* Indicates interactivity */
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid var(--color-text-secondary); /* Subtle border */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    display: block; /* Prevent extra space below image */
+    margin: 0 auto; /* Center image within its grid cell if width < 100% */
+}
+
+.gallery img:hover,
+.gallery img:focus-visible { /* Added focus style for keyboard navigation */
+    transform: scale(1.05); /* Slightly enlarge image on hover/focus */
+    outline: 2px solid var(--color-primary); /* Focus indicator */
+    outline-offset: 2px;
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 768px) {
+    /* === ADDED THIS RULE BLOCK === */
+    .gallery {
+        /* Explicitly set 3 columns for desktop view */
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem; /* Optional: Adjust gap for desktop if needed */
+    }
+    /* === END OF ADDED RULE BLOCK === */
+
+    /* This existing rule for desktop image styles remains */
+    .gallery img {
+        width: 100%; /* Image takes full width of its container on desktop */
+        height: 500px; /* Adjust height if needed for the new aspect ratio */
+    }
+}

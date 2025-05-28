@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Urbanist:ital,wght@0,100..900;1,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* 1. 定义全局 CSS 变量 (Define Global CSS Variables) */
+/* 将这些变量定义在 :root 选择器中，以便全局可用 */
+:root {
+    /* 颜色变量 (Color Variables) - 你需要替换为你项目实际的颜色值 */
+    --primary-color: #3366cc; /* 示例：一种蓝色 */
+    --text-color: #333333; /* 示例：深灰色 */
+    --background-color: #ffffff; /* 示例：白色 */
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    color: var(--text-color); /* 使用 CSS 变量 */
+    background-color: var(--background-color); /* 使用 CSS 变量 */
+}
+
+h1 {
+    font-size: 4.2rem;
+    color: var(--primary-color); /* 使用 CSS 变量 */
+}
+
+h2 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--primary-color); /* 使用 CSS 变量 */
+}
+
+h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-color); /* 使用 CSS 变量 */
+    border-top: 1px solid #cccccc; /* 在顶部添加一条 1px 宽、浅灰色实线边框 */
+    /* 你可以修改边框的宽度 (e.g., 2px)、样式 (e.g., dashed, dotted) 和颜色 (e.g., #e0e0e0) */
+
+/* --- 添加间距 --- */
+margin-top: 40px;  /* 在边框上方添加 40px 的外边距，将整个板块与上一个板块拉开距离 */
+/* 这个值可以根据需要调整 */
+
+padding-top: 20px; /* 在边框下方、标题文字上方添加 20px 的内边距，避免文字紧贴边框 */
+/* 这个值也可以根据需要调整 */
+
+/* --- 可选：调整标题下方的间距 --- */
+margin-bottom: 15px; /* 调整标题和其下方内容（p, ul, ol等）之间的距离，按需设置 */
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* --- 新增的 li 样式 --- */
+li {
+    font-size: 1.0rem;
+    /* line-height: 1.5; */ /* 如果需要，取消注释并调整行高 */
+}

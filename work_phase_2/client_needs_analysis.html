@@ -1,0 +1,525 @@
+<!DOCTYPE html><html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Client Needs Analysis for the Connected Communities Initiative (CCI) website focusing on Regional or International Communities, part of DECO7140 Work Phase 2." />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <title>WP2 - Client Needs Analysis</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="client_needs_analysis.html" aria-current="page"
+                        >Client Needs Analysis</a
+                    >
+                </li>
+                <li><a href="user_stories.html">User Stories</a></li>
+                <li>
+                    <a href="accessibility_assessment.html"
+                        >Accessibility Assessment</a
+                    >
+                </li>
+                <li><a href="ethics_analysis.html">Ethics Analysis</a></li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        >GenAI/MT Acknowledgement</a
+                    >
+                </li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <header>
+                <h1>WP2 Client Needs Analysis</h1>
+            </header>
+
+            <hr>
+            <section>
+                <h2>The Client Brief</h2>
+                <h3>Project Overview</h3>
+                <p>
+                Our project delivers a dedicated online platform designed to support and connect Australia's vibrant international communities. Recognizing the <span class="interactive-highlight" data-card="Need 1" tabindex="0">challenges faced by international students, new migrants, and their families when settling into a new environment</span>, this website serves as a <span class="interactive-highlight" data-card="Need 10" tabindex="0">central, trustworthy hub</span>. Our goal is to <span class="interactive-highlight" data-card="Value 2" tabindex="0">empower newcomers</span> and <span class="interactive-highlight" data-card="Value 1" tabindex="0">foster a greater sense of belonging and social cohesion</span>.
+                </p>
+                <p>
+                    We provide <span class="interactive-highlight" data-card="Need 1" tabindex="0">practical settlement guidance</span>, <span class="interactive-highlight" data-card="Need 2" tabindex="0">resources for employment</span> and daily life, and pathways to <span class="interactive-highlight" data-card="Need 3" tabindex="0">build meaningful connections within specific cultural groups and the broader Australian community</span>. Aligned with our mission, the platform aims to <span class="interactive-highlight" data-card="Value 3" tabindex="0">celebrate cultural diversity</span>, <span class="interactive-highlight" data-card="Need 4" tabindex="0">ensure information is accessible</span>, and create a <span class="interactive-highlight" data-card="Need 5" tabindex="0">welcoming, inclusive, and ethically designed space</span> for all users. This initiative directly addresses the need for <span class="interactive-highlight" data-card="Need 1" tabindex="0">reliable, peer-informed support</span> to navigate life in Australia successfully.
+                </p>
+                <h3>Community Focus Areas</h3>
+                <p>Shaped by community needs, our key focus areas are:</p>
+                <ul>
+                    <li><strong>Settling In:</strong> Practical guidance on housing, banking, transport & daily essentials.</li>
+                    <li><strong>Employment:</strong> Resources for job seeking, career growth & networking.</li>
+                    <li><strong>Connection:</strong> Finding cultural groups, events & building support networks.</li>
+                    <li><strong>Information Hub:</strong> A central place for reliable info & shared experiences.</li>
+                </ul>
+                    <h3>Target Audience</h3>
+                    <p>This website aims to serve three primary groups within the 'Regional or International Communities' focus:</p>
+                    <ol>
+                        <li>
+                            <strong>International Students:</strong> Seeking academic support, practical settlement advice (housing, banking), peer connections, and resources for navigating student life in Australia. (Reflecting insights similar to Shihao Wu's interview).
+                        </li>
+                        <li>
+                            <strong>New Immigrants/Migrants:</strong> Including skilled workers and families (like Rajesh Kumar, Nguyen Van Cuong, Isabella Rossi), needing localized information on employment, family settlement (schools, partner jobs), healthcare, language support, and connection with both their cultural community and the broader Australian society.
+                        </li>
+                        <li>
+                            <strong>Local Australians:</strong> Individuals interested in learning about and engaging with diverse international cultures present in their community, fostering cross-cultural understanding and connections.
+                        </li>
+                    </ol>
+                    <p>
+                        <strong>Accessibility must be prioritised</strong> across all design and content decisions to ensure a seamless and equitable experience for every user, regardless of ability or the assistive technologies they may use.
+                    </p>
+                    <h3>Project Goals</h3>
+                    <p>The key goals for this website are:</p>
+                    <ol>
+                        <li>
+                            <strong>Authentic Representation & Cultural Celebration:</strong> Accurately represent the diverse experiences and identities of international students and migrants, avoiding stereotypes, while also showcasing cultural richness for interested local Australians.
+                        </li>
+                        <li>
+                            <strong>Accessible Information & Resource Hub:</strong> Provide clear, practical, and easily accessible information covering settlement challenges, employment pathways, cultural connections, and relevant community resources for both newcomers and locals seeking information.
+                        </li>
+                        <li>
+                            <strong>Meaningful Connections & Support Network:</strong> Foster connections among international students/migrants (peer support) and facilitate positive interactions between newcomers and the local community, strengthening social cohesion.
+                        </li>
+                        <li>
+                            <strong>Ethical, Inclusive & Sensitive Design:</strong> Ensure the website design, content, and features uphold the highest ethical standards, are inclusive of all users (considering language, ability, background), and demonstrate cultural sensitivity in all aspects.
+                        </li>
+                    </ol>
+                <div class="value-box">
+                    <h3>Value 1: Promote Social Cohesion & Belonging</h3>
+                    <p>
+                        CCI aims to strengthen societal bonds and foster
+                        meaningful connections.
+                    </p>
+                    <div class="flip-card-container">
+                        <div
+                            class="flip-card"
+                            tabindex="0"
+                            aria-label="Need 1: Find Local Community Connections. Click for Feature."
+                        >
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <p><strong>Need 1</strong></p>
+                                    <p>
+                                        Users need easy ways to find relevant
+                                        local groups, events, and businesses to
+                                        combat isolation.
+                                    </p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>
+                                        <strong
+                                            >Feature: Community Directory &
+                                            Events</strong
+                                        >
+                                    </p>
+                                    <p>
+                                        Searchable/filterable directory for
+                                        groups & events. Allows user
+                                        submissions. Meets need for connection.
+                                        <strong>API:</strong> Events/Resource
+                                        Directory.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flip-card"
+                            tabindex="0"
+                            aria-label="Need 2: Share Experiences & Support. Click for Feature."
+                        >
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <p><strong>Need 2</strong></p>
+                                    <p>
+                                        Users seek a platform to connect with
+                                        peers, share practical advice, and offer
+                                        mutual support.
+                                    </p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>
+                                        <strong
+                                            >Feature: Discussion Forum</strong
+                                        >
+                                    </p>
+                                    <p>
+                                        Topic-based forum for peer Q&A and
+                                        experience sharing. Fosters support &
+                                        connection.
+                                        <strong>API:</strong> Discussion Board.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-box">
+                    <h3>Value 2: Empower Newcomers & Ensure Inclusivity</h3>
+                    <p>
+                        CCI prioritizes empowering diverse communities and
+                        ensuring inclusive platforms.
+                    </p>
+                    <div class="flip-card-container">
+                        <div
+                            class="flip-card"
+                            tabindex="0"
+                            aria-label="Need 3: Centralized Settlement Guidance. Click for Feature."
+                        >
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <p><strong>Need 3</strong></p>
+                                    <p>
+                                        Newcomers need a single, reliable,
+                                        localized source for practical
+                                        settlement info (housing, banking etc.)
+                                    </p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>
+                                        <strong
+                                            >Feature: Localized Settlement
+                                            Guides</strong
+                                        >
+                                    </p>
+                                    <p>
+                                        Section with practical guides for
+                                        specific cities/regions. Peer input via
+                                        forum possible. Provides key resources.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flip-card"
+                            tabindex="0"
+                            aria-label="Need 4: Native Language for Complex Info. Click for Feature."
+                        >
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <p><strong>Need 4</strong></p>
+                                    <p>
+                                        Users desire access to critical/complex
+                                        information (legal, health) in their
+                                        native language for clarity.
+                                    </p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>
+                                        <strong
+                                            >Feature: Multi-language
+                                            Content</strong
+                                        >
+                                    </p>
+                                    <p>
+                                        Language switcher for key
+                                        guides/navigation. Addresses major user
+                                        need & promotes inclusivity.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flip-card"
+                            tabindex="0"
+                            aria-label="Need 5: Easy-to-Understand English. Click for Feature."
+                        >
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <p><strong>Need 5</strong></p>
+                                    <p>
+                                        Users require website content in clear,
+                                        simple English, avoiding jargon.
+                                    </p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>
+                                        <strong
+                                            >Feature: Plain English
+                                            Strategy</strong
+                                        >
+                                    </p>
+                                    <p>
+                                        Enforce Plain English guidelines (WCAG
+                                        3.1.5) for all content. Improves
+                                        usability for everyone.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flip-card"
+                            tabindex="0"
+                            aria-label="Need 6: Safe & Trustworthy Space. Click for Feature."
+                        >
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <p><strong>Need 6</strong></p>
+                                    <p>
+                                        Users need a trustworthy, moderated
+                                        online space with clear purpose and
+                                        privacy controls.
+                                    </p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>
+                                        <strong
+                                            >Feature: Moderation & Privacy
+                                            Features</strong
+                                        >
+                                    </p>
+                                    <p>
+                                        Implement clear guidelines, visible
+                                        moderation, reporting tools, and user
+                                        privacy settings. Builds trust.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-box">
+                    <h3>Value 3: Celebrate & Maintain Cultural Identity</h3>
+                    <p>
+                        CCI aims to create platforms celebrating unique
+                        community identities.
+                    </p>
+                    <div class="flip-card-container">
+                        <div
+                            class="flip-card"
+                            tabindex="0"
+                            aria-label="Need 7: Avoid Stereotypes. Click for Feature."
+                        >
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <p><strong>Need 7</strong></p>
+                                    <p>
+                                        The website must authentically represent
+                                        the community and avoid stereotypes.
+                                    </p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>
+                                        <strong
+                                            >Feature: Culturally Sensitive
+                                            Content</strong
+                                        >
+                                    </p>
+                                    <p>
+                                        Use authentic visuals/themes. Involve
+                                        community in content review. Moderate
+                                        user content for respect.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flip-card"
+                            tabindex="0"
+                            aria-label="Need 8: Access Specific Cultural Items. Click for Feature."
+                        >
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <p><strong>Need 8</strong></p>
+                                    <p>
+                                        Users seek specific cultural resources
+                                        like specialty shops or cultural event
+                                        listings.
+                                    </p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>
+                                        <strong
+                                            >Feature: Culturally Tagged
+                                            Directory</strong
+                                        >
+                                    </p>
+                                    <p>
+                                        Ensure directory includes
+                                        categories/tags for cultural shops,
+                                        services, and events. Aids cultural
+                                        connection.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-box">
+                    <h3>
+                        Value 4: Improve Quality of Life (Focus: Employment)
+                    </h3>
+                    <p>
+                        CCI aims to provide resources enhancing community
+                        members' lives, including employment opportunities.
+                    </p>
+                    <div class="flip-card-container">
+                        <div
+                            class="flip-card"
+                            tabindex="0"
+                            aria-label="Need 9: Localized Employment & Partner Support. Click for Feature."
+                        >
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <p><strong>Need 9</strong></p>
+                                    <p>
+                                        Users need localized job info,
+                                        CV/interview help, networking tips, work
+                                        culture insights, including support for
+                                        partners.
+                                    </p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>
+                                        <strong
+                                            >Feature: Employment Support
+                                            Hub</strong
+                                        >
+                                    </p>
+                                    <p>
+                                        Section with curated job links, resume
+                                        guides, networking tips, work culture
+                                        info, and dedicated partner resources.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-box">
+                    <h3>Value 5: Meet Core Technical & Ethical Requirements</h3>
+                    <p>
+                        CCI requires accessible, mobile-friendly, dynamic, and
+                        ethically designed websites.
+                    </p>
+                    <div class="flip-card-container">
+                        <div
+                            class="flip-card"
+                            tabindex="0"
+                            aria-label="Need 10: WCAG 2.2 AA Compliance. Click for Feature."
+                        >
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <p><strong>Need 10</strong></p>
+                                    <p>
+                                        Website MUST comply with WCAG 2.2 Level
+                                        AA accessibility standards.
+                                    </p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>
+                                        <strong
+                                            >Feature: Accessible Design
+                                            Implementation</strong
+                                        >
+                                    </p>
+                                    <p>
+                                        Apply WCAG AA (semantic HTML, contrast,
+                                        keyboard nav, ARIA, alt text etc.). Test
+                                        rigorously.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flip-card"
+                            tabindex="0"
+                            aria-label="Need 11: Responsive Design & PWA. Click for Feature."
+                        >
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <p><strong>Need 11</strong></p>
+                                    <p>
+                                        Website must be responsive
+                                        (mobile-first) and function as a PWA.
+                                    </p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>
+                                        <strong
+                                            >Feature: Responsive CSS & PWA
+                                            Setup</strong
+                                        >
+                                    </p>
+                                    <p>
+                                        Use mobile-first CSS (media queries,
+                                        flex/grid). Implement Manifest & Service
+                                        Worker for PWA.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flip-card"
+                            tabindex="0"
+                            aria-label="Need 12: Dynamic Feature Integration. Click for Feature."
+                        >
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <p><strong>Need 12</strong></p>
+                                    <p>
+                                        Must integrate one dynamic feature
+                                        (e.g., Forum) using only the provided
+                                        CCI APIs.
+                                    </p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>
+                                        <strong
+                                            >Feature: API Integration
+                                            Module</strong
+                                        >
+                                    </p>
+                                    <p>
+                                        Integrate chosen module (e.g.,
+                                        Discussion Board) using JS `Workspace`
+                                        with specified CCI API endpoints.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flip-card"
+                            tabindex="0"
+                            aria-label="Need 13: Newsletter Plugin Styling. Click for Feature."
+                        >
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <p><strong>Need 13</strong></p>
+                                    <p>
+                                        Mandatory integration of a third-party
+                                        newsletter plugin (ethical concerns
+                                        noted).
+                                    </p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>
+                                        <strong
+                                            >Feature: Styled Plugin
+                                            Integration</strong
+                                        >
+                                    </p>
+                                    <p>
+                                        Integrate plugin script. Apply CSS
+                                        styling to match site design. Address
+                                        ethics separately.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

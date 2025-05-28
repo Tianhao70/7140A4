@@ -1,0 +1,113 @@
+/* --- Base Styles --- */
+
+/* Import Google Font - Open Sans (Variable) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Define CSS Variables (Color Scheme - Task 5) */
+:root {
+    /* Color Palette */
+    --color-background: #E8EAE3;         /* Very light gray/off-white for page background */
+    --color-background-subtle: #F6F3E8; /* Slightly darker gray for subtle backgrounds */
+    --color-text: #343A40;              /* Dark gray for main text */
+    --color-text-secondary: #6C757D;    /* Medium gray for secondary text, borders */
+    --color-primary: #188616;           /* Primary blue for links, buttons, interactive elements */
+    --color-secondary: var(--color-text-secondary); /* Example: Reuse secondary text color */
+    --color-accent: #FD7E14;            /* Orange accent for highlights */
+    --color-success: #b3e9d0;           /* Green for success messages/actions */
+    --color-warning: #FFC107;           /* Yellow for warnings */
+    --color-danger: #DC3545;            /* Red for errors/danger actions */
+
+    /* Base Font Stack */
+    --font-base: "Open Sans", sans-serif; /* Define base font family */
+
+    /* Optional: Define base font sizes if needed elsewhere */
+    /* --font-size-base: 1rem; */ /* Typically 16px */
+    /* Add other variables as needed, e.g., border-radius */
+}
+
+/* Apply base font styles and colors to the body (Task 2 & usage of Task 5) */
+body {
+    font-family: var(--font-base);      /* Use the font variable */
+    font-weight: 400;                   /* Default weight */
+    line-height: 1.6;                   /* Base line height */
+    color: var(--color-text);           /* Use the text color variable */
+    background-color: var(--color-background); /* Use the background color variable */
+    padding-top: 2rem
+}  
+/* Basic Link Styling */
+a {
+    color: var(--color-text); /* Use primary color for links */
+    text-decoration: none; /* Optional: Remove underline by default */
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline; /* Optional: Add underline on hover/focus */
+}
+/* Heading Styles (Task 3) - Mobile First */
+/* Heading Styles (Task 3) - Mobile First */
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    /* color: var(--color-primary); */ /* Example: Optionally set heading color */
+}
+
+h1 {
+    font-size: 2rem;        /* Base size for mobile (e.g., ~32px if root is 16px) */
+}
+
+h2 {
+    font-size: 1.5rem;      /* Base size for mobile (e.g., ~24px) */
+}
+
+h3 {
+    font-size: 1.2rem;      /* Base size for mobile (e.g., ~19px) */
+}
+
+p {
+    font-size: 1.2rem;
+}
+li {
+    font-size: 1.1rem;
+}
+/* --- End Base Styles --- */
+
+
+/* --- Layout Styles (Media Queries often go here or in layout.css) --- */
+/* You can place the media query here in base.css */
+/* OR add these rules inside the existing media query in layout.css */
+
+/* Desktop Heading Font Size Adjustments (Task 3) */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2.6rem;   /* Larger size for desktop (e.g., ~42px) */
+        /* line-height: 1.1; /* Optionally adjust line-height too */
+    }
+
+    h2 {
+        font-size: 2rem;    /* Larger size for desktop (e.g., ~32px) */
+    }
+
+    h3 {
+        font-size: 1.5rem;   /* Larger size for desktop (e.g., ~24px) */
+    }
+    p {
+        font-size: 1.3rem;
+    }
+    li {
+        font-size: 1.2rem;
+    }
+    /* Optional: Adjust text-alignment here if needed, like the example slide */
+    /*
+    h1, h2, h3 {
+        text-align: left;
+    }
+    */
+}
+
+/* --- End Layout Styles --- */
+

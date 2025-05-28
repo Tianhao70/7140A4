@@ -1,0 +1,346 @@
+/* css/page_css/home_index.css */
+
+/* --- Skip Link --- */
+.skip-link {
+    position: absolute;
+    top: -999px;
+    left: 0;
+    background: var(--color-accent, #E67E22);
+    color: white;
+    padding: var(--space-sm, 0.5rem) var(--space-md, 1rem);
+    z-index: 10000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0 0 var(--border-radius-sm, 4px) 0;
+    transition: top 0.3s ease-in-out;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    /* --- IMPORTANT: Replace with your actual high-quality hero image path --- */
+    background-image: url('/work_phase_3/assets/hero-background.jpg'); 
+    background-color: var(--color-primary-dark, #1a3d20); /* Fallback or base color if image fails */
+    background-size: cover;
+    background-position: center center; /* Adjust as needed, e.g., center 40% */
+    color: #fff; 
+    padding: clamp(4rem, 15vh, 8rem) var(--space-md, 1rem); /* Responsive padding */
+    text-align: center;
+    position: relative;
+    margin-bottom: var(--space-xl, 2.5rem); 
+    min-height: 65vh; /* Ensure significant viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid var(--color-accent, #E67E22); /* Accent border */
+}
+
+.hero-overlay { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.65) 100%); /* Darker gradient for better contrast */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative; 
+    z-index: 2; 
+    max-width: 850px; 
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--space-lg, 1.5rem);
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 6vw, 4.2rem); 
+    font-weight: 700; 
+    line-height: 1.15;
+    margin-bottom: var(--space-md, 1rem);
+    color: #fff; 
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6); /* Stronger shadow for pop */
+}
+.hero-title .brand-highlight { 
+    color: var(--color-accent-light, #FFD700); /* Example: Gold accent for brand name, define this var */
+    /* Or use your main accent: color: var(--color-accent, #E67E22); */
+    display: block; /* Make it stack for emphasis if desired */
+    margin-top: var(--space-xs, 0.25rem);
+}
+
+.hero-subtitle {
+    font-size: clamp(1.1rem, 2.8vw, 1.7rem);
+    line-height: 1.7;
+    margin-bottom: var(--space-xl, 2rem); 
+    opacity: 0.95; 
+    font-weight: 400; 
+    color: #746767; 
+    max-width: 700px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-cta.button {
+    padding: var(--space-md, 1rem) var(--space-xl, 2rem);
+    font-size: 1.2rem; 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    letter-spacing: 0.8px;
+    background-color: var(--color-accent, #E67E22); 
+    color: #fff; 
+    border: none;
+    border-radius: var(--border-radius-md, 8px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hero-cta.button:hover,
+.hero-cta.button:focus {
+    background-color: color-mix(in srgb, var(--color-accent, #E67E22) 80%, black); 
+    color: #fff;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    outline: 2px solid var(--color-accent-light, #FFD700); /* Focus outline */
+    outline-offset: 3px;
+}
+.hero-cta.button .icon-before {
+    margin-right: var(--space-sm, 0.5rem);
+}
+
+/* --- General Home Page Content Styling --- */
+.page-content { 
+    padding-top: var(--space-xl, 2.5rem);
+    padding-bottom: var(--space-xl, 2.5rem); /* Add bottom padding too */
+}
+
+.home-section {
+    margin-bottom: var(--space-xxl, 3.5rem); 
+    padding-bottom: var(--space-xl, 2.5rem); 
+    /* Removed border-bottom for a cleaner look between sections; spacing should be enough */
+}
+.home-section:last-of-type {
+    margin-bottom: var(--space-lg, 1.5rem); 
+}
+
+.home-section .section-title {
+    font-size: var(--font-size-h2-prominent, 2.6rem); /* Make section titles prominent */
+    color: var(--color-primary, #2D5F34);
+    margin-bottom: var(--space-lg, 1.5rem); 
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding-bottom: var(--space-sm, 0.5rem);
+    /* border-bottom: 3px solid var(--color-accent, #E67E22); Optional: If you prefer underlined titles */
+}
+.home-section .section-title .icon-before {
+    margin-right: var(--space-md, 1rem);
+    font-size: 0.85em; 
+    color: var(--color-accent, #E67E22); 
+}
+
+.home-section p, .home-section .section-intro {
+    font-size: 1.15rem; /* Larger base paragraph text */
+    line-height: 1.8; 
+    color: var(--color-text-secondary, #555); /* Slightly darker secondary text */
+    margin-bottom: var(--space-md, 1rem);
+    max-width: 70ch; /* Optimal for readability */
+}
+.home-section p strong, .home-section .section-intro strong {
+    color: var(--color-text, #333333);
+    font-weight: 600;
+}
+.home-section .section-intro { 
+    font-size: 1.2rem;
+    color: var(--color-text, #333333); 
+    margin-bottom: var(--space-lg, 1.5rem);
+}
+
+/* Persona Highlights List */
+.persona-highlights {
+    list-style: none;
+    padding-left: 0;
+    margin-top: var(--space-lg, 1.5rem);
+}
+.persona-highlights li {
+    background-color: var(--color-background-subtle, #F2F2F2);
+    padding: var(--space-md, 1rem) var(--space-lg, 1.5rem);
+    border-radius: var(--border-radius-sm, 4px);
+    margin-bottom: var(--space-md, 1rem); 
+    display: flex;
+    align-items: flex-start; 
+    font-size: 1.05rem; 
+    color: var(--color-text, #333333);
+    line-height: 1.7;
+    border-left: 5px solid var(--color-primary-light, #5cb85c); /* A lighter shade of primary or accent */
+}
+.persona-highlights .icon-bullet {
+    color: var(--color-primary, #2D5F34);
+    margin-right: var(--space-md, 1rem);
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    padding-top: 0.2em; 
+}
+
+/* Feature Grid & Cards */
+.feature-grid {
+    display: grid;
+    gap: var(--space-lg, 2rem); /* Increased gap */
+    margin-top: var(--space-lg, 1.5rem);
+}
+@media(min-width: 600px) { 
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(min-width: 992px) { 
+    .feature-grid {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+.feature-card {
+    background-color: #fff; 
+    padding: var(--space-xl, 2rem); 
+    border-radius: var(--border-radius-lg, 12px); /* More rounded cards */
+    border: 1px solid var(--color-background-subtle, #E0E0E0); /* Softer border */
+    box-shadow: var(--box-shadow-gentle, 0 5px 15px rgba(0,0,0,0.07)); /* Softer, more diffused shadow */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--box-shadow-lifted, 0 10px 25px rgba(0,0,0,0.1));
+}
+.feature-card .feature-card-icon-container {
+    background-color: var(--color-primary-light, #e9f5e9); /* Light primary bg for icon */
+    border-radius: 50%;
+    padding: var(--space-md, 1rem);
+    margin-bottom: var(--space-md, 1rem);
+    display: inline-flex; /* To center icon properly */
+}
+.feature-card .icon-feature {
+    font-size: 2.8rem; 
+    color: var(--color-primary, #2D5F34); /* Primary color for feature icons */
+    line-height: 1; 
+}
+.feature-card h3 {
+    font-size: var(--font-size-h3-card, 1.6rem); /* Specific H3 size for cards */
+    color: var(--color-primary, #2D5F34);
+    margin-top: 0;
+    margin-bottom: var(--space-sm, 0.5rem);
+    font-weight: 700;
+}
+.feature-card p {
+    font-size: 1rem;
+    color: var(--color-text-secondary, #555);
+    line-height: 1.6;
+    margin-bottom: 0; 
+}
+
+/* Proposal Links Styling */
+.proposal-links.list-styled {
+    padding-left: 0; 
+}
+.proposal-links.list-styled li {
+    padding-left: 0; 
+    margin-bottom: var(--space-lg, 1.5rem); /* More space between links */
+}
+.proposal-links.list-styled li::before {
+    display: none; 
+}
+.proposal-links.list-styled li a {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; /* Pushes arrow to the right */
+    padding: var(--space-lg, 1.5rem); 
+    background-color: #fff; /* White background for links */
+    border-radius: var(--border-radius-md, 8px); 
+    color: var(--color-text, #333333); /* Darker text for links */
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    font-weight: 600; 
+    font-size: 1.15rem; /* Larger link text */
+    border: 1px solid var(--color-text-secondary, #ddd);
+    box-shadow: var(--box-shadow-subtle, 0 2px 5px rgba(0,0,0,0.05));
+}
+.proposal-links.list-styled li a:hover,
+.proposal-links.list-styled li a:focus {
+    background-color: var(--color-primary, #2D5F34); /* Primary color on hover */
+    color: #fff; 
+    transform: translateY(-3px) scale(1.01); 
+    box-shadow: 0 6px 12px rgba(45,95,52,0.2); /* Shadow related to primary color */
+    outline: none;
+    border-color: var(--color-primary, #2D5F34);
+}
+.proposal-links.list-styled li a .icon-before { 
+    margin-right: var(--space-md, 1rem); 
+    font-size: 1.4em; 
+    color: var(--color-accent, #E67E22); /* Accent for icons in links */
+}
+.proposal-links.list-styled li a:hover .icon-before,
+.proposal-links.list-styled li a:focus .icon-before {
+    color: #fff; /* White icon on hover */
+}
+.proposal-links.list-styled li a .link-description {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--color-text-secondary, #6C757D);
+    font-weight: 400;
+    margin-top: var(--space-xs, 0.25rem);
+}
+.proposal-links.list-styled li a:hover .link-description,
+.proposal-links.list-styled li a:focus .link-description {
+    color: rgba(255,255,255,0.8);
+}
+.proposal-links.list-styled li a .icon-after {
+    font-size: 1rem;
+    color: var(--color-text-secondary, #6C757D);
+    transition: transform 0.2s ease;
+}
+.proposal-links.list-styled li a:hover .icon-after,
+.proposal-links.list-styled li a:focus .icon-after {
+    color: #fff;
+    transform: translateX(3px);
+}
+
+
+/* Final Statement Styling */
+.final-statement {
+    background-color: var(--color-background-subtle, #F2F2F2); 
+    padding: var(--space-xl, 2.5rem) var(--space-lg, 1.5rem); /* More padding */
+    border-radius: var(--border-radius-lg, 12px); /* More rounded */
+    border-top: 5px solid var(--color-primary, #2D5F34); /* Top border accent */
+    margin-top: var(--space-xl, 2.5rem);
+    text-align: center;
+}
+.final-statement .section-title {
+    border-bottom: none; 
+    justify-content: center;
+    font-size: var(--font-size-h2, 2.2rem); /* Slightly smaller if needed */
+}
+.final-statement p {
+    text-align: center;
+    font-size: 1.2rem; /* Prominent final statement text */
+    line-height: 1.8;
+    color: var(--color-text, #333333);
+    max-width: 75ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+.final-statement p strong {
+    color: var(--color-primary, #2D5F34);
+}
+
+/* Footer Placeholder */
+.site-footer-placeholder {
+    text-align: center; 
+    padding: var(--space-xl, 2rem); 
+    background-color: var(--color-dark, #222222); 
+    color: var(--color-background-subtle, #F2F2F2); 
+    margin-top: var(--space-xxl, 3.5rem);
+    font-size: 0.9rem;
+}

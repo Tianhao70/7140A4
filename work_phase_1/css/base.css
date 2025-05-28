@@ -1,0 +1,72 @@
+/* base.css */
+
+:root {
+    --color-background: #ffffff; /* 白色 */
+    --color-dark: #333333; /* 深灰色 */
+    --color-primary: #8a84e2; /* 紫色/薰衣草色 */
+    --color-secondary: #849a84; /* 绿色/橄榄色 */
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-dark);
+    font-family: "Urbanist", sans-serif;
+    /* 默认基础字号通常为 1rem (16px) */
+}
+
+/* 为标题和段落设置统一基础样式 */
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    line-height: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem; /* 可根据需要调整 */
+    font-weight: 400; /* 默认常规字重 */
+}
+
+/* --- 标题具体样式 --- */
+/* !!! 重要：请将下面的 font-size 值替换为你的样式指南中指定的实际 rem 值 !!! */
+
+h1 {
+    font-size: 4rem; /* <-- 替换为样式指南的值 */
+    color: var(--color-primary);
+}
+
+h2 {
+    font-size: 3rem; /* <-- 替换为样式指南的值 */
+    color: var(--color-secondary);
+}
+
+h3 {
+    font-size: 1.5rem; /* <-- 替换为样式指南的值 */
+}
+
+h4 {
+    font-size: 1rem; /* <-- 替换为样式指南的值 */
+    font-weight: bold; /* 按要求设为粗体 */
+}
+
+h5 {
+    font-size: 0.75rem; /* <-- 替换为样式指南的值 */
+    font-weight: bold; /* 按要求设为粗体 */
+}
+
+/* --- 段落和链接样式 --- */
+
+p {
+    font-size: 1rem; /* 根据新幻灯片示例，明确设置段落字号为 1rem */
+    /* 继承 body 的 color */
+    /* 继承 h1-p 的 line-height 和 font-weight */
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}

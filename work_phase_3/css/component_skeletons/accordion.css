@@ -1,0 +1,92 @@
+/* css/component_skeletons/accordion.css */
+
+/* Styling for the main accordion container */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm, 0.5rem); /* Use smaller gap from your site_map.css or adjust as preferred */
+}
+
+/* Styling for each individual accordion item */
+.accordion-item {
+    border-radius: var(--border-radius-md, 8px); /* Match your site_map.css */
+    overflow: hidden; 
+    /* border: 1px solid var(--color-text-secondary, #ddd); /* Moved to site_map.css for page-specific styling */
+    background-color: var(--color-background, #fff); /* Moved to site_map.css */
+}
+
+/* Styling for the accordion header button */
+.accordion-header {
+    display: flex; /* For icon alignment if needed */
+    align-items: center;
+    justify-content: space-between; /* For right-aligned chevron */
+    width: 100%;
+    padding: var(--space-md, 1rem); 
+    font-weight: 600; /* Base boldness */
+    font-size: 1rem;  /* Base font size */
+    color: var(--color-text, #333333); /* Default text color */
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid var(--color-background-subtle, #F2F2F2); /* Subtle separator */
+    background-color: var(--color-background-subtle, #f8f9fa); /* Default light bg */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+/* Remove bottom border for the last item in a group when it's closed and not open */
+.accordion > .accordion-item:last-child:not(.open) > .accordion-header,
+.accordion.nested > .accordion-item:last-child:not(.open) > .accordion-header {
+    border-bottom-color: transparent;
+}
+
+
+/* Styling for the accordion content panel */
+.accordion-content {
+    max-height: 0; /* Initially hidden, JS will manage this for open state */
+    overflow-y: auto; /* Allow vertical scroll if content overflows */
+    padding: 0 var(--space-lg, 1.5rem); /* Horizontal padding when closed */
+    background: var(--color-background, #fff); /* Default content background */
+    font-size: 0.95rem;
+    line-height: 1.6;
+    transition: max-height 0.35s ease-in-out, padding-top 0.35s ease-in-out, padding-bottom 0.35s ease-in-out;
+    border-top: 1px solid var(--color-text-secondary, #ccc); /* Separator line from header */
+}
+
+/* Styling for the content panel when the item is open */
+.accordion-item.open .accordion-content {
+    /* max-height is set by JavaScript to content.scrollHeight + "px" */
+    padding-top: var(--space-lg, 1.5rem); /* Vertical padding when open */
+    padding-bottom: var(--space-lg, 1.5rem);
+}
+.accordion-item.open > .accordion-header {
+     border-bottom-color: transparent; /* Hide border when open */
+}
+
+
+/* Basic styling for nested accordion containers */
+.accordion.nested {
+    margin-top: var(--space-sm, 0.5rem); /* Space above nested section */
+    margin-left: var(--space-md, 1rem); /* Indent nested accordion */
+    padding-left: var(--space-sm, 0.5rem); /* Padding inside the indent */
+    border-left: 2px solid var(--color-background-subtle, #F2F2F2); /* Visual indicator line */
+    gap: var(--space-xs, 0.25rem); /* Smaller gap for nested items */
+}
+
+/* Optional: Style for header when focused (accessibility) */
+.accordion-header:focus-visible { /* Use focus-visible for better keyboard-only focus */
+    outline: 2px solid var(--color-accent, #E67E22);
+    outline-offset: 2px;
+}
+
+/* Chevron icon for open/close state - can be in skeleton or page-specific */
+.accordion-header::after {
+    content: '\f078'; /* FontAwesome chevron-down */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900; /* Solid icon */
+    transition: transform 0.3s ease-out;
+    color: var(--color-text-secondary, #6C757D); 
+    font-size: 0.8em; 
+    margin-left: var(--space-sm, 0.5rem); /* Space from text if text doesn't fill width */
+}
+.accordion-item.open > .accordion-header::after {
+    transform: rotate(180deg); /* Rotates to chevron-up */
+}

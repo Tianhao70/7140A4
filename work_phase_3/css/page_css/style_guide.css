@@ -1,0 +1,226 @@
+/* css/page_css/style_guide.css */
+
+/* Page Header for Style Guide */
+.style-guide-header {
+    text-align: center;
+    margin-bottom: var(--space-xl, 2rem);
+    padding-bottom: var(--space-lg, 1.5rem);
+    border-bottom: 1px solid var(--color-background-subtle, #F2F2F2);
+}
+.style-guide-header h1 {
+    color: var(--color-primary, #2D5F34); /* Or your defined H1 color */
+    margin-bottom: var(--space-md, 1rem);
+}
+.style-guide-header .intro-text {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary, #6C757D);
+    max-width: 75ch;
+    margin: 0 auto var(--space-sm, 0.5rem) auto;
+}
+.style-guide-header .intro-text.philosophy {
+    font-style: italic;
+    color: var(--color-text, #333333);
+    margin-top: var(--space-md, 1rem);
+}
+
+/* Optional: Style Guide Highlights Section */
+.style-guide-highlights {
+    background-color: var(--color-background-subtle, #F2F2F2);
+    padding: var(--space-lg, 1.5rem);
+    margin-bottom: var(--space-xl, 2rem);
+    border-radius: var(--border-radius-md, 8px);
+    border: 1px solid var(--color-text-secondary, #e0e0e0);
+}
+.highlights-title {
+    font-size: var(--font-size-h3, 1.75rem); /* Use H3 size or slightly smaller H2 */
+    color: var(--color-primary, #2D5F34);
+    text-align: center;
+    margin-bottom: var(--space-lg, 1.5rem);
+}
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg, 1.5rem);
+}
+.highlight-item {
+    text-align: center;
+    padding: var(--space-md, 1rem);
+    background-color: #fff;
+    border-radius: var(--border-radius-sm, 4px);
+    box-shadow: var(--box-shadow-light, 0 2px 5px rgba(0,0,0,0.05));
+}
+.highlight-item h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text, #333333);
+    margin-bottom: var(--space-sm, 0.5rem);
+}
+.color-preview-group {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-sm, 0.5rem);
+    margin-bottom: var(--space-sm, 0.5rem);
+}
+.color-dot {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--color-text-secondary, #ccc);
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+}
+.font-preview-heading {
+    font-size: 1.5rem; /* Example size */
+    font-weight: 700; /* Example weight */
+    color: var(--color-primary, #2D5F34);
+    margin-bottom: var(--space-xs, 0.25rem);
+}
+.font-preview-body {
+    font-size: 1rem; /* Example size */
+    color: var(--color-text, #333333);
+}
+.micro-button-preview { /* Example style for a tiny button preview */
+    padding: var(--space-xs, 0.25rem) var(--space-sm, 0.5rem);
+    font-size: 0.9rem;
+    /* Inherits .button and .button-primary styles */
+}
+
+
+/* Section Title for Cards */
+.section-title-cards {
+    font-size: var(--font-size-h2, 2rem);
+    color: var(--color-text);
+    text-align: center;
+    margin-top: var(--space-xl, 2rem);
+    margin-bottom: var(--space-md, 1rem);
+    padding-bottom: var(--space-sm, 0.5rem);
+    /* border-bottom: 1px solid var(--color-text-secondary, #ccc); */
+}
+
+
+/* Card Container and Style Card (Your existing styles are good, minor enhancements) */
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile first: Single column */
+    gap: var(--space-lg, 2rem); /* Increased gap for better separation */
+    margin-top: var(--space-md, 1rem); /* Space above the cards */
+    margin-bottom: var(--space-xl, 2rem); /* Space below the cards */
+}
+
+.style-card {
+    background-color: var(--color-background, #FFFFFF); 
+    border-radius: var(--border-radius-lg, 12px); /* More rounded cards */
+    padding: 0; /* Remove padding, will apply to content-wrapper */
+    box-shadow: var(--box-shadow-gentle, 0 5px 15px rgba(0,0,0,0.08)); /* Softer shadow */
+    border: 1px solid var(--color-text-secondary, #e0e0e0); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* cursor: pointer; /* We will make the link area the cursor pointer */
+    display: flex; 
+    flex-direction: column; 
+    height: 100%; 
+    overflow: hidden; /* To ensure border-radius on image works */
+}
+
+.style-card:hover,
+.style-card:focus-within { 
+    transform: translateY(-8px); /* More lift */
+    box-shadow: var(--box-shadow-lifted, 0 10px 25px rgba(0,0,0,0.12));
+}
+
+.style-card .card-image { /* Ensure this class is on your <img> */
+    width: 100%;
+    height: 200px; /* Or use aspect-ratio */
+    object-fit: cover; /* Ensures image covers the area nicely */
+    display: block; /* Removes extra space below image */
+    border-bottom: 1px solid var(--color-text-secondary, #e0e0e0); /* Separator */
+}
+
+.style-card .card-content-wrapper { /* New wrapper for padding */
+    padding: var(--space-lg, 1.5rem);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Important for footer button */
+}
+
+.style-card .card-title {
+    margin-top: 0; 
+    margin-bottom: var(--space-sm, 0.5rem); /* Reduced margin */
+    color: var(--color-primary, #2D5F34); 
+    font-size: 1.75rem; /* Larger title */
+    font-weight: 700; /* Bolder */
+    display: flex;
+    align-items: center;
+}
+.style-card .card-title .icon-before {
+    margin-right: var(--space-sm, 0.5rem);
+    font-size: 0.9em;
+}
+
+.style-card .card-description {
+    color: var(--color-text-secondary, #6C757D);
+    margin-bottom: var(--space-lg, 1.5rem); /* More space before button */
+    flex-grow: 1; 
+    font-size: 1.05rem; /* Slightly larger description */
+    line-height: 1.6;
+}
+
+.style-card .card-link {
+    display: inline-flex; /* Use flex for icon alignment */
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary, #2D5F34);
+    color: white;
+    padding: var(--space-sm, 0.75rem) var(--space-md, 1.25rem); /* Adjusted padding */
+    border-radius: var(--border-radius-sm, 4px);
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600; /* Bolder link text */
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    margin-top: auto; 
+    align-self: flex-start; 
+    border: 2px solid transparent; /* For focus state consistency */
+}
+.style-card .card-link .icon-after-link {
+    margin-left: var(--space-xs, 0.25rem);
+    font-size: 0.9em;
+    transition: transform 0.2s ease;
+}
+
+.style-card .card-link:hover,
+.style-card .card-link:focus {
+    background-color: var(--color-accent, #E67E22); /* Use accent color on hover/focus */
+    color: white; /* Ensure text remains white or contrasting */
+    text-decoration: none;
+    transform: scale(1.05);
+    outline: none;
+}
+.style-card .card-link:focus-visible { /* More specific focus for keyboard */
+    outline: 2px solid var(--color-accent, #E67E22);
+    outline-offset: 2px;
+    border-color: var(--color-background, #FFFFFF); /* Inner border to make outline clear */
+}
+
+.style-card .card-link:hover .icon-after-link {
+    transform: translateX(3px);
+}
+
+
+/* Desktop Layout */
+@media (min-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+    .style-card .card-title {
+        font-size: 1.9rem; /* Larger title on desktop */
+    }
+}
+
+/* Helper for visually hidden on mobile, shown on desktop */
+.visually-hidden-mobile {
+    display: none;
+}
+@media (min-width: 768px) { /* Or your desired breakpoint for showing highlights */
+    .visually-hidden-mobile {
+        display: block; /* Or grid, flex depending on its content */
+    }
+}

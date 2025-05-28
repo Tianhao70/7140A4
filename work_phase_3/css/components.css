@@ -1,0 +1,132 @@
+/* css/components.css */
+
+/* Base Visibility Styles (Mobile First) */
+@import './component_skeletons/accordion.css';
+
+
+
+/* --- Navigation Menu Styles (SA3) --- */
+#nav-mobile {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-success); /* Using success color as chosen by user */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 900; /* Keep z-index relatively high */
+}
+
+#nav-desktop {
+    display: none; /* Hide desktop nav by default (Mobile First) */
+
+    /* Styles below apply when display:block is activated by media query */
+    position: fixed; /* Make the navbar fixed at the top */
+    top: 0;          /* Position it at the very top */
+    left: 0;         /* Ensure it aligns to the left edge */
+    width: 100%;     /* Make it span the full viewport width */
+
+    /* Choose a background color from your variables */
+    background-color: var(--color-success); /* Using success color */
+
+    /* Apply a shadow BELOW the navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    /* Ensure nav is above scrolling content but below viewer (viewer z-index is 1000) */
+    z-index: 900;
+}
+
+
+/* Base Styling for the UL inside ALL nav elements */
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; /* Default spacing for mobile */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Styling for MOBILE navigation links */
+#nav-mobile ul li a {
+    display: block;
+    padding: 1rem 0;
+    font-size: 1.5rem; /* Keep or adjust mobile size */
+    color: #FFFFFF; /* Assuming white text on success background */
+    text-decoration: none;
+    text-align: center;
+}
+
+/* --- ADDED STYLE FOR ACTIVE MOBILE LINK --- */
+#nav-mobile ul li a[aria-current="page"] {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px; /* Adjust space between text and underline */
+    /* You could also add/replace with other styles like: */
+    /* font-weight: bold; */
+    /* background-color: rgba(0, 0, 0, 0.1); */ /* Subtle background indication */
+}
+/* --- END OF ADDED STYLE --- */
+
+
+/* Example responsive image utility class (if needed elsewhere) */
+.responsive-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Desktop Styles (Overrides using Media Query) */
+@media (min-width: 768px) {
+    #nav-mobile {
+        display: none; /* Hide mobile nav on desktop */
+    }
+
+    #nav-desktop {
+        display: block; /* Show desktop nav on desktop */
+    }
+
+    /* Style the UL inside the DESKTOP nav */
+    #nav-desktop ul {
+       justify-content: space-evenly; /* Center the links horizontally */
+       padding: 0 2rem; /* Add some horizontal padding to the container */
+    }
+
+    /* Style the links inside the DESKTOP nav */
+    #nav-desktop ul li a {
+        color: var(--color-text); /* Use standard text color on desktop */
+        padding: 1rem 1rem;    /* Adjust padding for desktop links */
+        font-size: 1rem;          /* Adjust font size for desktop nav */
+        font-weight: 500;
+        text-decoration: none; /* Remove underline by default */
+        display: inline-block;
+        border-radius: 4px;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        position: relative; /* Needed for potential pseudo-element underlines */
+    }
+
+    /* Desktop nav link hover/focus style (excluding the current page) */
+    #nav-desktop ul li a:not([aria-current="page"]):hover,
+    #nav-desktop ul li a:not([aria-current="page"]):focus {
+        color: var(--color-text);
+        background-color: var(--color-background-subtle); /* Use subtle background variable */
+        text-decoration: none; /* Ensure no underline on hover/focus */
+    }
+
+    /* --- ADDED STYLE FOR ACTIVE DESKTOP LINK --- */
+    #nav-desktop ul li a[aria-current="page"] {
+        text-decoration: underline;
+        text-decoration-thickness: 3px; /* Make underline slightly thicker */
+        text-underline-offset: 6px;    /* More space below text */
+        /* Prevent hover effect on the current page link if desired */
+        background-color: transparent;
+        /* Optionally make it bold */
+        /* font-weight: bold; */
+        /* Optionally change color */
+        /* color: var(--color-primary); */
+    }
+    /* --- END OF ADDED STYLE --- */
+
+}
+
+/* --- End Navigation Menu Styles --- */

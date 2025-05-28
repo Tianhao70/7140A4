@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/base.css" /> <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/page_css/visceral_design.css" />
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Visceral Design - Style Guide | Global Roots Community</title>
+</head>
+<body>
+    <nav id="nav-mobile" aria-label="Main Navigation">
+        <ul>
+            <li><a href="index.html"><span class="icon"><i class="fas fa-home" aria-hidden="true"></i></span><span class="nav-text-mobile">Home</span></a></li>
+            <li><a href="site_map.html"><span class="icon"><i class="fas fa-sitemap" aria-hidden="true"></i></span><span class="nav-text-mobile">Site Map</span></a></li>
+            <li><a href="style_guide.html" aria-current="page"><span class="icon"><i class="fas fa-palette" aria-hidden="true"></i></span><span class="nav-text-mobile">Style Guide</span></a></li>
+            <li><a href="ethical_response.html"><span class="icon"><i class="fas fa-balance-scale" aria-hidden="true"></i></span><span class="nav-text-mobile">Ethics</span></a></li>
+            <li><a href="genai_mt_acknowledgement.html"><span class="icon"><i class="fas fa-robot" aria-hidden="true"></i></span><span class="nav-text-mobile">GenAI</span></a></li>
+        </ul>
+    </nav>
+
+    <nav id="nav-desktop" aria-label="Main Navigation">
+        <ul>
+            <li><a href="index.html">WP3 Home</a></li>
+            <li><a href="site_map.html">Site Map</a></li>
+            <li><a href="style_guide.html" aria-current="page">Style Guide</a></li>
+            <li><a href="ethical_response.html">Ethics Response</a></li>
+            <li><a href="genai_mt_acknowledgement.html">GenAI</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <header class="page-header visceral-header">
+                <h1>Visceral Design</h1>
+                <p class="intro-text">This section of the Style Guide focuses on the immediate aesthetic appeal and first impressions of the "Global Roots Community" website. It details the core visual choices concerning page layouts, typography, color scheme, imagery, and navigation structure. These elements are strategically designed to create a welcoming, trustworthy, and intuitive experience for our diverse users—new immigrants and international students—from their very first interaction. All decisions are informed by user research conducted in A2 (personas, user stories, client needs), established UX/UI principles (Gestalt, Color Theory, Norman's Principles), and aim to meet WCAG 2.2 AA accessibility standards, fostering positive visceral reactions and aligning with the project's ethical considerations.</p>
+            </header>
+
+            <nav aria-label="Breadcrumb" class="breadcrumb-nav mb-4">
+                <ol class="breadcrumbs">
+                    <li><a href="style_guide.html">Style Guide Home</a></li>
+                    <li><span aria-current="page">Visceral Design</span></li>
+                </ol>
+            </nav>
+
+            <article id="page-layouts" class="design-section">
+                <h2 class="section-title"><i class="fas fa-object-group icon-before" aria-hidden="true"></i>Page Layouts & Wireframes</h2>
+                <p class="section-intro">The wireframes presented below outline the proposed macro-structure for key pages of the "Global Roots Community" website. The design prioritizes a clear information hierarchy (Gestalt principles of grouping and alignment), intuitive navigation (Norman's Discoverability), and responsive adaptability to ensure a positive and effortless first impression across all devices. Annotations explicitly link these structural decisions to specific user needs derived from A2 research (e.g., quick access to information for Persona 'Shihao Wu', localized resources for Persona 'Isabella Rossi'), client goals (e.g., "Accessible Information & Resource Hub"), and relevant WCAG 2.2 AA criteria for accessibility.</p>
+                
+                <section class="gallery mt-3">
+                    <figure>
+                        <img src="assets/Wireframe_Home_Mobile.png" alt="Home page wireframe for mobile view showing logo, prominent search, login button, 'Enter Community' CTA, and sections for 'Hottest Topics' and 'Newest Topics', and a newsletter placeholder." />
+                        <figcaption>
+                            <strong>Home Mobile:</strong> Features a clean, scannable layout. The "Global Roots Community" logo/name is prominent. Centralized search addresses User Story [e.g., US-SH01: As Shihao, a new student, I want to quickly find practical settlement advice]. A hamburger menu (top-left) offers familiar navigation (Norman's Conceptual Model). Key CTAs ("Log In", "Enter Community") are distinct. Content sections like "Hottest Topics" and "Newest Topics" facilitate quick discovery, catering to A2 Client Need 1 ("challenges faced by...students...when settling"). Touch targets will meet WCAG 2.5.5 (Target Size).
+                            <br><em><strong>Annotation (Visceral & A2 Link):</strong> The uncluttered layout and clear calls to action aim to reduce cognitive load for newcomers (A2 Persona: Shihao Wu, Nguyen Van Cuong), creating an immediate sense of ease and competence. The structure supports quick orientation, which is crucial for users feeling overwhelmed in a new environment (A2 User Story derived from Shihao's interview: "access peer-tested advice...to avoid common mistakes").</em>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/Wireframe_Home_Desktop.png" alt="Home page wireframe for desktop view with top navigation, search, 'Enter Community' & 'Download App' CTAs, and newsletter section." />
+                        <figcaption>
+                            <strong>Home Desktop:</strong> Utilizes a standard wide layout with top navigation reflecting the <a href="site_map.html">sitemap</a>. A prominent hero area is designated for engaging, culturally sensitive imagery (see <a href="#imagery-guidelines">Imagery Guidelines</a> & <a href="reflective_design.html#imagery-tone-section">Reflective Design</a>) and primary CTAs ("Enter Community"). A "Download Mobile App" CTA supports client goals. The newsletter section aims to build an audience. High text-to-background contrast (WCAG 1.4.3) is a priority.
+                            <br><em><strong>Annotation (Visceral & A2 Link):</strong> The professional and organized layout aims to establish trust and credibility from the first glance, critical for users like A2 Persona: Isabella Rossi, who seeks a reliable hub. The layout supports the client's goal for an "Accessible Information & Resource Hub".</em>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/Wireframe_Community_Mobile.png" alt="Community page wireframe for mobile, with 'Topics' button, search, and lists for 'Hottest' and 'Newest Topics'." />
+                        <figcaption>
+                            <strong>Community Mobile:</strong> Optimized for focused content Browse. A "Topics" button allows access to categorized discussions (as per <a href="site_map.html">sitemap</a>). Prominent search facilitates specific information seeking. "Hottest" and "Newest Topics" lists use a mobile-friendly card-based approach (see <a href="behavioural_design.html#cards-section">Post Card design</a>), aiding scannability (A2 User Need: "Easily browse discussions"). Keyboard accessibility for all interactive elements (WCAG 2.1.1) is planned.
+                            <br><em><strong>Annotation (Visceral & A2 Link):</strong> This layout prioritizes content discovery, catering to users like A2 Persona: Shihao Wu who actively seek peer experiences. The simplicity aims for a non-intimidating experience, vital for users like Nguyen Van Cuong with potential language barriers.</em>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/Wireframe_Community_Desktop.png" alt="Community page wireframe for desktop, showing top navigation, 'Topics' menu, search, and topic lists." />
+                        <figcaption>
+                            <strong>Community Desktop:</strong> Maintains consistent top navigation. A "Topics" menu/filter (aligning with <a href="site_map.html">sitemap</a>'s 'Community > Topics' structure) provides access to specific discussion categories (e.g., Settlement, Jobs). The main area will display topic lists, likely using cards for clarity and visual appeal.
+                            <br><em><strong>Annotation (Visceral & A2 Link):</strong> The structured and filterable layout is designed to help users like A2 Persona: Rajesh Kumar efficiently find relevant professional or cultural discussions. The clear visual organization (Gestalt principles) enhances the perception of a well-maintained and valuable resource.</em>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/Wireframe_Log In_Mobile.png" alt="Log In page wireframe for mobile, showing 'Home' & 'Community' navigation, and multiple login/signup buttons." />
+                        <figcaption>
+                            <strong>Log In Mobile:</strong> Streamlined for quick user authentication. Clear buttons for Email/Password login and prominent third-party login options (Google, Apple, Facebook) are provided. "Sign up" and "Forgot Password" links are easily accessible. The vertical stacking of elements is optimized for mobile ergonomics. All form inputs will have correctly associated labels (WCAG 3.3.2, WCAG 4.1.2).
+                            <br><em><strong>Annotation (Visceral & A2 Link):</strong> Offering multiple login options addresses A2 User Story derived from user interviews (e.g., Isabella Rossi's family may have different preferences). The uncluttered interface reduces cognitive load, making the login process feel simple and secure, which is a key visceral factor for trust.</em>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/Wireframe_Log In_Desktop.png" alt="Log In page wireframe for desktop with header links and a grid of login/signup options." />
+                        <figcaption>
+                            <strong>Log In Desktop:</strong> A clean, centered layout for authentication, minimizing distractions. Login options are presented in a visually balanced grid or list for easy comparison and selection. Keyboard focus indicators will be highly visible (WCAG 2.4.7 Focus Visible), ensuring operability for all users.
+                            <br><em><strong>Annotation (Visceral & A2 Link):</strong> The organized and professional presentation of login choices supports a perception of security and reliability, crucial for a platform where users might share personal experiences (A2 Client Need: "central, trustworthy hub"). This aligns with creating a positive first impression of the platform's dependability.</em>
+                        </figcaption>
+                    </figure>
+                </section>
+
+                <aside id="viewer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="viewer-caption">
+                    <button id="close-viewer" aria-label="Close image viewer">×</button>
+                    <img id="viewer-img" src="" alt="" /> <p id="viewer-caption"></p>
+                </aside>
+            </article>
+
+            <article id="typography" class="design-section">
+                <h2 class="section-title"><i class="fas fa-font icon-before" aria-hidden="true"></i>Typography</h2>
+                <p class="section-intro">The typography for the "Global Roots Community" website is specified below. These choices prioritize readability, accessibility (WCAG 1.4.3 Contrast (Minimum), WCAG 1.4.4 Resize text, WCAG 1.4.8 Visual Presentation (AAA for line height)), and cultural inclusivity. The aim is to ensure a comfortable and clear reading experience for our diverse user base, including those with visual impairments or for whom English is an additional language, directly addressing A2 User Need for easily understandable information (e.g., A2 Persona: Nguyen Van Cuong).</p>
+                <div class="typography-details">
+                    <div class="typography-item">
+                        <h3>Primary Font: Roboto</h3>
+                        <p><strong>Style:</strong> Sans-serif</p>
+                        <p><strong>Rationale (Visceral & A2 Link):</strong> Roboto is selected for its exceptional clarity, modern yet friendly aesthetic, and extensive Unicode language support, crucial for displaying characters for languages like Chinese, Vietnamese, and Portuguese (A2 Client Need 4: Multi-language content support). Its clean lines contribute to a trustworthy and approachable visceral impression, making users feel instantly at ease. This font choice supports an "Ethical, Inclusive & Sensitive Design" (A2 Project Goal 4).</p>
+                        <p style="font-family: 'Roboto', Arial, sans-serif; font-size: 1.1rem; margin-top: 0.5rem;"><em>Roboto Example: The quick brown fox jumps over the lazy dog. 1234567890. Árvore. Cây. 树.</em></p>
+                    </div>
+                    <div class="typography-item">
+                        <h3>Fallback Font: Arial</h3>
+                        <p><strong>Style:</strong> Sans-serif</p>
+                        <p><strong>Rationale:</strong> Arial serves as a widely available and highly legible fallback to ensure consistent rendering and readability across all devices and operating systems should Roboto fail to load, maintaining a baseline level of visual consistency and accessibility.</p>
+                    </div>
+                    <div class="typography-item">
+                        <h3>Font Sizes & Hierarchy</h3>
+                        <p>A clear typographic hierarchy, using relative units (rem) for scalability (WCAG 1.4.4 Resize text), is established to guide users and indicate content importance. This adheres to Gestalt principles of visual organization and aids scannability. (The following sizes are proposed for the A4 website and should be reflected in its <code>base.css</code>):</p>
+                        <ul>
+                            <li><strong>Body Text:</strong> Baseline <code>1rem</code> (browser default, typically 16px).</li>
+                            <li><strong>H1 (Main Page Title):</strong> Approx. <code>2.5rem - 2.8rem</code> (e.g., 40px-45px)</li>
+                            <li><strong>H2 (Section Titles):</strong> Approx. <code>2rem - 2.2rem</code> (e.g., 32px-35px)</li>
+                            <li><strong>H3 (Sub-Section Titles):</strong> Approx. <code>1.5rem - 1.75rem</code> (e.g., 24px-28px)</li>
+                            <li>(H4, H5, H6 would scale down accordingly)</li>
+                        </ul>
+                        <div class="typography-example mt-2">
+                            <h1 style="font-family: 'Roboto', Arial, sans-serif; font-size: 2.6rem; line-height: 1.2; color: #2D5F34;">Heading 1 (Roboto, #2D5F34)</h1>
+                            <h2 style="font-family: 'Roboto', Arial, sans-serif; font-size: 2rem; line-height: 1.3; color: #333333;">Heading 2 (Roboto, #333333)</h2>
+                            <h3 style="font-family: 'Roboto', Arial, sans-serif; font-size: 1.5rem; line-height: 1.4; color: #333333;">Heading 3 (Roboto, #333333)</h3>
+                            <p style="font-family: 'Roboto', Arial, sans-serif; font-size: 1rem; line-height: 1.6; color: #333333;">Example body text (Roboto, 1rem, #333333). This font is chosen for clarity and wide language support. Line spacing is 1.6 for readability.</p>
+                        </div>
+                    </div>
+                    <div class="typography-item">
+                        <h3>Line Spacing (Leading)</h3>
+                        <p><strong>Standard:</strong> <code>1.6</code> for body text. Headings will have slightly tighter line heights (e.g., <code>1.2</code> to <code>1.4</code>) for visual appeal and compactness.</p>
+                        <p><strong>Rationale (Visceral & A2 Link):</strong> Generous line spacing significantly enhances readability and reduces visual fatigue, particularly for users with visual impairments or dyslexia (supports WCAG 1.4.8 Visual Presentation - AAA, an aspirational best practice) and aligns with A2 User Need 5 ("Plain English and clear communication strategy"). This contributes to a more calming, professional, and accessible visceral experience.</p>
+                    </div>
+                    <div class="typography-item">
+                        <h3>Text Style & Language</h3>
+                        <p><strong>Strategy:</strong> Adherence to a "Plain English" strategy for all website-generated content, as outlined in the Reflective Design section's Language Checklist.</p>
+                        <p><strong>Rationale (Visceral & A2 Link):</strong> Content will avoid jargon, using clear and concise phrasing to support non-native English speakers (A2 Persona: Nguyen Van Cuong) and users with varying literacy levels (A2 User Need 5). This contributes to a more welcoming and less intimidating visceral experience, reducing cognitive load and fostering immediate understanding and trust.</p>
+                    </div>
+                </div>
+                <p class="annotation mt-3"><strong>Annotation:</strong> The proposed typographic system is foundational to the "Global Roots Community" website's usability and visceral appeal. Roboto's modern neutrality and high legibility support a trustworthy and professional first impression. The established hierarchy and generous spacing aid scannability (Gestalt principles) and meet WCAG requirements, catering to the diverse user needs identified in A2 (e.g., international students like Shihao Wu requiring clear academic and settlement information, and newcomers like Nguyen Van Cuong needing easily digestible content). The "Plain English" approach further enhances visceral comfort by reducing cognitive load and promoting inclusivity, an ethical design consideration directly linked to A2 Project Goal 4 ("Ethical, Inclusive & Sensitive Design").</p>
+            </article>
+
+            <article id="color-scheme" class="design-section">
+                <h2 class="section-title"><i class="fas fa-palette icon-before" aria-hidden="true"></i>Color Scheme</h2>
+                <p class="section-intro">The proposed color scheme for the "Global Roots Community" website aims to evoke feelings of trust, growth, community warmth, and professionalism. All choices are made with accessibility (WCAG 1.4.3, 1.4.1, 1.4.11) and cultural sensitivity at the forefront, ensuring a welcoming visceral experience for all users. These colors are intended to be defined as CSS variables for the A4 project's <code>base.css</code>.</p>
+                <div class="color-palette-container">
+                    <div class="color-swatch-group">
+                        <h4>Primary & Text Colors</h4>
+                        <div class="color-item">
+                            <div class="swatch" style="background-color: #2D5F34;"></div>
+                            <p><strong>Proposed Primary (Deep Green):</strong> <code>#2D5F34</code><br><em>Use:</em> Major Calls to Action (CTAs like "Enter Community" from `Wireframe_Home_Desktop.png`), key interactive elements (e.g., active navigation states), branding accents.<br><em>Rationale (Visceral, A2 Link & Theory):</em> Green is widely associated with growth, harmony, nature, stability, and safety (Color Theory)). This aligns with the supportive and nurturing mission of the "Global Roots Community" (A2 Client Value 2: Empower Newcomers). It aims to evoke a sense of calm and trustworthiness, vital for users like A2 Persona: Isabella Rossi seeking a reliable support hub. Ensures good contrast on light backgrounds for readability.</p>
+                        </div>
+                        <div class="color-item">
+                            <div class="swatch" style="background-color: #333333;"></div>
+                            <p><strong>Proposed Main Text (Dark Gray):</strong> <code>#333333</code><br><em>Use:</em> Main body text, most headings.<br><em>Rationale:</em> Provides excellent readability and contrast against the proposed white background (WCAG 1.4.3). A neutral, professional choice that allows content to be the primary focus. The contrast ratio with #FFFFFF (White) is 14.5:1, far exceeding WCAG AA requirements (4.5:1).</p>
+                        </div>
+                    </div>
+                    <div class="color-swatch-group">
+                        <h4>Accent & Functional Colors</h4>
+                        <div class="color-item">
+                            <div class="swatch" style="background-color: #E67E22;"></div>
+                            <p><strong>Proposed Accent (Soft Orange):</strong> <code>#E67E22</code><br><em>Use:</em> Secondary buttons, highlights, important notifications, or decorative accents requiring attention.<br><em>Rationale (Visceral & Theory):</em> Orange can evoke warmth, enthusiasm, creativity, and approachability (Color Theory)). Used judiciously, it draws attention and guides the user without causing alarm. Must ensure sufficient contrast when used with text (WCAG 1.4.11 for UI components), vital for users scanning for actions (e.g., A2 Persona: Rajesh Kumar)).</p>
+                        </div>
+                         <div class="color-item">
+                            <div class="swatch" style="background-color: #188616;"></div> <p><strong>Proposed Success (Bright Green):</strong> <code>#188616</code> (or similar)<br><em>Use:</em> Success messages, positive confirmation indicators (e.g., after form submission).<br><em>Rationale:</em> Standard UX convention for positive feedback, reinforcing user actions successfully.</p>
+                        </div>
+                        <div class="color-item">
+                            <div class="swatch" style="background-color: #DC3545;"></div> <p><strong>Proposed Danger/Error (Red):</strong> <code>#DC3545</code> (or similar)<br><em>Use:</em> Error messages, critical warnings, destructive action confirmations.<br><em>Rationale:</em> Standard UX convention for warnings and errors, immediately signaling caution and aligning with Norman's Signifiers principle.</p>
+                        </div>
+                    </div>
+                    <div class="color-swatch-group">
+                        <h4>Background & Neutral Tones</h4>
+                        <div class="color-item">
+                            <div class="swatch" style="background-color: #FFFFFF; border: 1px solid #ddd;"></div>
+                            <p><strong>Proposed Main Background (White):</strong> <code>#FFFFFF</code><br><em>Use:</em> Default page background, primary content areas.<br><em>Rationale:</em> Provides a clean, bright, and high-contrast backdrop for text and other content, maximizing readability (WCAG 1.4.3) and creating a feeling of spaciousness and clarity. This supports a calm, focused, and professional visceral experience, desired by users needing clear information (A2 User Need: "Accessible Information Hub").</p>
+                        </div>
+                        <div class="color-item">
+                            <div class="swatch" style="background-color: #F2F2F2; border: 1px solid #ddd;"></div>
+                            <p><strong>Proposed Subtle Background (Light Gray):</strong> <code>#F2F2F2</code><br><em>Use:</em> Section backgrounds (e.g., for cards like `Post Card.png`), sidebars, subtle separators, disabled states.<br><em>Rationale:</em> Helps to differentiate content areas or states without being visually distracting, maintaining a clean aesthetic and supporting visual hierarchy (Gestalt principles of common region).</p>
+                        </div>
+                        <div class="color-item">
+                            <div class="swatch" style="background-color: #6C757D;"></div> <p><strong>Proposed Secondary Text (Medium Gray):</strong> <code>#6C757D</code> (or similar)<br><em>Use:</em> Sub-text, captions, helper text, less critical information, placeholder text in forms.<br><em>Rationale:</em> Provides sufficient contrast on light backgrounds for readability (WCAG 1.4.3) while de-emphasizing secondary information, thus guiding user focus to primary content.</p>
+                        </div>
+                    </div>
+                </div>
+                <ul class="list-styled mt-3">
+                    <li><strong>Accessibility (WCAG Compliance):</strong> All primary color combinations for text and interactive elements (e.g., text on buttons) intended for the A4 site will be rigorously tested to meet or exceed WCAG 2.2 Level AA contrast ratios: 4.5:1 for normal text and 3:1 for large text (WCAG 1.4.3). Graphical objects and UI components will meet 3:1 contrast against adjacent colors (WCAG 1.4.11). Color will not be the sole means of conveying information or distinguishing visual elements (WCAG 1.4.1). This is a core technical requirement from the A2 Client Brief.</li>
+                    <li><strong>Cultural Sensitivity:</strong> The chosen palette aims for broad international appeal, consciously avoiding colors that may have strong negative connotations in the primary cultures of the target user groups identified in A2 research (e.g., Chinese, Vietnamese, Indian, Brazilian users). The overall aesthetic intends to be professional, supportive, and modern, fostering a sense of trust and welcome from the first visit. This aligns with A2 Project Goal 4: "Ethical, Inclusive & Sensitive Design".</li>
+                </ul>
+                <p class="annotation mt-3"><strong>Annotation:</strong> The proposed color scheme is fundamental to the "Global Roots Community" website's visceral appeal and perceived identity. The combination of Deep Green (Primary) and Soft Orange (Accent) is intended to create a balance of trustworthiness and support (green symbolizing growth, stability, and safety – reflecting the platform's aim to help users feel grounded) with welcoming warmth and approachability (orange for energy and optimism). The high contrast ensured by Dark Gray text on a White background prioritizes readability, directly impacting ease of use from the first glance and catering to users with visual impairments (A2 Accessibility Assessment). This color strategy supports the client's goal for an inclusive, empowering platform and aims to make all users, including those represented by A2 Personas like Shihao Wu and Nguyen Van Cuong, feel instantly comfortable, respected, and supported. The selection avoids colors that could be misconstrued culturally, reinforcing an ethical and inclusive design approach.</p>
+            </article>
+
+            <article id="imagery-guidelines" class="design-section">
+                <h2 class="section-title"><i class="fas fa-images icon-before" aria-hidden="true"></i>Imagery Guidelines</h2>
+                <p class="section-intro">Imagery is pivotal in shaping the visceral experience of "Global Roots Community," creating an immediate emotional connection and reinforcing the platform's identity. These guidelines ensure consistency, authenticity, inclusivity, and accessibility in all visual content, aligning with our brand values and user needs. For a deeper understanding of the conceptual and emotional goals behind our imagery selection, please refer to the <a href="reflective_design.html#imagery-tone-section">"Meaning through Imagery and Tone" section in Reflective Design</a>.</p>
+                
+                <h4>1. Image Style & Theme:</h4>
+                <ul>
+                    <li><strong>Focus & Authenticity:</strong> Prioritize authentic, high-quality photographs that depict diverse individuals (reflecting the international student and newcomer demographics identified in A2 User Research) interacting positively and naturally in community, learning, or supportive settings relevant to life in Australia. Images should feel genuine and relatable, avoiding overly posed or artificial stock photography. This supports A2 Project Goal 1: "Authentic Representation & Cultural Celebration".</li>
+                    <li><strong>Emotional Tone:</strong> Images should evoke feelings of warmth, welcome, collaboration, achievement, empowerment, and belonging. Aim for natural lighting, and capture candid or semi-candid moments where possible. The overall visual tone should be optimistic and reassuring, as discussed in the <a href="reflective_design.html#imagery-tone-section">Reflective Design</a> section regarding site identity.</li>
+                    <li><strong>Contextual Relevance:</strong> Ensure images are directly relevant to the accompanying content. For example, "Study Apply" sections might feature students in academic or collaborative settings, while "Jobs" sections could show professionals networking or in work environments. This enhances comprehension and user engagement.</li>
+                    <li><strong>Exemplars:</strong> The imagery concepts discussed in the <a href="reflective_design.html#imagery-tone-section">Reflective Design</a> section (e.g., `image1.jpg` – a welcoming circle, `image2.jpg` – collaborative guidance, `image3.jpg` – celebrating milestones) serve as prime examples of the intended style, emotional impact, and alignment with user values identified in A2 (e.g., Belonging & Connection, Empowerment).</li>
+                </ul>
+
+                <h4>2. Technical Specifications:</h4>
+                <ul>
+                    <li><strong>File Formats:</strong>
+                        <ul>
+                            <li>**JPEG:** Preferred for most photographs due to good compression and quality.</li>
+                            <li>**PNG:** Use for graphics or logos requiring a transparent background.</li>
+                            <li>**SVG:** Ideal for icons and simple illustrations due to scalability, sharpness, and typically smaller file sizes. This is the preferred format for icons.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Optimization:</strong> All images MUST be optimized for the web to ensure fast loading times, crucial for users on varying internet connections or mobile data (an A2 accessibility and usability consideration). Tools like TinyPNG, Squoosh, or integrated build tool optimizers are recommended. Strive for the best balance between visual quality and file size.</li>
+                    <li><strong>Dimensions & Responsiveness:</strong>
+                        <ul>
+                            <li>Define standard aspect ratios for common image uses where consistency is key (e.g., 16:9 for hero banners, 4:3 or 3:2 for card thumbnails, inspired by designs like `Post Card.png`).</li>
+                            <li>Implement responsive images using the `&lt;picture&gt;` element or `srcset` and `sizes` attributes in `&lt;img&gt;` tags. This ensures appropriately sized images are served for different devices and screen resolutions, improving performance and adhering to principles related to WCAG 1.4.4 (Resize text, which can be affected by non-scalable image containers).</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>3. Alt Text (Alternative Text) - WCAG 1.1.1 Non-text Content:</h4>
+                <ul>
+                    <li><strong>Mandatory & Critical:</strong> All meaningful images (those conveying information) MUST have descriptive, concise `alt` text. This is essential for accessibility, particularly for users with visual impairments using screen readers. It also benefits SEO and situations where images fail to load. This is a core requirement from the A2 Accessibility Assessment.</li>
+                    <li><strong>Guidance for Writing Effective Alt Text:</strong>
+                        <ul>
+                            <li>**Content & Function:** Describe the image's core content and, if it serves a function (like a linked image), describe that function. What information is the image intended to convey?</li>
+                            <li>**Specificity & Brevity:** Be specific enough to be useful, but as brief as possible. Avoid starting with redundant phrases like "Image of..." or "Picture of..." unless the medium itself is relevant.</li>
+                            <li>**Decorative Images:** If an image is purely decorative and provides no additional information beyond what is already in the text, use an empty `alt` attribute (<code>alt=""</code>) so screen readers can ignore it.</li>
+                            <li>**Linked Images:** If an image is the only content within a link, its `alt` text must describe the link's destination or action.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Example (for `assets/image1.jpg` as described in Reflective Design):</strong> `alt="Diverse group of smiling people of various apparent backgrounds and ages, sitting in a circle outdoors on a sunny day, engaged in an animated and positive discussion, conveying a sense of community and welcome."` (This should be adapted if the final image differs).</li>
+                </ul>
+
+                <h4>4. Icon Style (Visual & Implementation):</h4>
+                <ul>
+                    <li><strong>Consistency:</strong> Icons should adhere to a single, consistent visual style throughout the website (e.g., line art, solid fill, specific stroke weight, rounded or sharp corners). Preference is for SVG icons for scalability, clarity, and ease of styling with CSS. FontAwesome is utilized for general UI icons within this A3 style guide website itself for demonstration.</li>
+                    <li><strong>Clarity & Recognizability:</strong> Icons must be easily recognizable and their meaning clear, even at small sizes, to effectively function as visual cues (Norman's Signifiers).</li>
+                    <li><strong>Color & Contrast:</strong> Icon colors must be chosen from the defined color palette and ensure sufficient contrast with their immediate background, adhering to WCAG 1.4.11 Non-text Contrast.</li>
+                    <li><strong>Accessibility (Behavioural Link):</strong> While visual style is visceral, ensure icons are implemented accessibly. For interactive icons, especially icon-only buttons, refer to the <a href="behavioural_design.html#icons-section">Behavioural Design: Icons</a> section for guidelines on `aria-label` and keyboard interactivity.</li>
+                </ul>
+
+                <h4>5. Cultural Sensitivity & Inclusivity in Imagery:</h4>
+                <ul>
+                    <li>Actively select and/or commission imagery that authentically and respectfully reflects the rich diversity of Australia's international communities (considering various ethnicities, ages, genders, abilities, and cultural practices relevant to the user personas from A2).</li>
+                    <li>Rigorously review all images to avoid perpetuating stereotypes, tokenism, or misrepresenting any group. Imagery should promote a feeling of inclusion and belonging for all users.</li>
+                    <li>Ensure images are sourced ethically, with appropriate permissions and licenses obtained. This directly supports the A2 Client Project Goal 4: "Ethical, Inclusive & Sensitive Design".</li>
+                </ul>
+                <p class="annotation mt-3"><strong>Annotation:</strong> These imagery guidelines are established to ensure that all visual content on the "Global Roots Community" website contributes positively to the user's visceral experience and aligns with our core values of inclusivity, support, and authenticity. Adherence to `alt` text requirements directly supports accessibility (WCAG 1.1.1), a critical need identified in A2 research. Culturally sensitive and diverse imagery aims to make all users feel seen, understood, and welcomed (A2 User Research findings on belonging and authentic representation), fostering a positive emotional connection from their very first impression and reinforcing the site's trustworthiness. The technical specifications support an optimal user experience through fast load times and responsive display across devices.</p>
+            </article>
+
+            <article id="navigation-structure-visceral" class="design-section">
+                <h2 class="section-title"><i class="fas fa-route icon-before" aria-hidden="true"></i>Navigation Structure (Visceral Impact)</h2>
+                <p class="section-intro">The proposed navigation structure for "Global Roots Community" is designed for immediate clarity, intuitive use, and a sense of effortless control, significantly impacting the user's initial visceral perception of the site's organization and ease of access. It directly reflects the information architecture detailed in the <a href="site_map.html">Site Map</a> and aims to instill user confidence through familiar, predictable patterns (prototypicality, a key aspect of Visceral Design as discussed in Week 4 lectures)).</p>
+                <ul class="list-styled mt-2">
+                    <li>
+                        <strong>Main Navigation (Desktop):</strong> A consistently placed horizontal top bar will feature primary sections: Home, Community, Accessibility, About Us, and Log In. This conventional layout (Norman's Conceptual Model & Discoverability principles) allows users to instantly understand the site's main areas and predict where to find information.
+                        <em>(Corresponds to wireframes like `Wireframe_Home_Desktop.png` and the top-level structure of `Sitemap.png`)</em>
+                    </li>
+                    <li>
+                        <strong>Mobile Navigation:</strong> A standard hamburger menu icon (<i class="fas fa-bars" aria-hidden="true"></i>), a widely understood mobile UI convention, will be used, typically located in the top-left or top-right of the viewport. This approach maximizes screen real estate for content on smaller devices while providing easy access to the full navigation structure.
+                        <em>(Corresponds to mobile wireframes like `Wireframe_Home_Mobile.png`)</em>
+                        <br><em>Note: The hamburger menu is the definitive approach for the "Global Roots Community" mobile navigation, ensuring consistency with common user expectations and the provided wireframes. This choice supports A2 User Needs for mobile-friendly Browse.</em>
+                    </li>
+                    <li>
+                        <strong>Secondary Navigation (e.g., within "Community" Section):</strong> Clear pathways to sub-sections such as "Topics," "Latest Replies," "Create New Post," and "My Post" (as outlined in the <a href="site_map.html">Site Map's</a> accordion detail for "Community") will be intuitively accessible from the main "Community" page. This logical grouping (Gestalt principle of Common Region)) helps users anticipate content and navigate efficiently.
+                        <em>(Corresponds to `Wireframe_Community_Desktop.png` and `Sitemap.png`)</em>
+                    </li>
+                    <li>
+                        <strong>Visceral Cues for Accessibility & Usability:</strong>
+                        Navigation links will be visually distinct from surrounding text. Clear and highly visible focus states (WCAG 2.4.7 Focus Visible) will be implemented for all interactive navigation elements to orient keyboard users. The current page will have a visually apparent active state (e.g., a distinct background color, stronger font weight, or an underline) in addition to the programmatic `aria-current="page"` attribute, providing immediate feedback on location (Norman's Feedback principle)).
+                    </li>
+                    <li>
+                        <strong>Impression of Simplicity, Control & Trust:</strong> The overall navigation structure aims to provide a clear, uncluttered, and predictable path from general site information (e.g., Homepage) to specific community interactions or resources (e.g., "Topics" or "Settlement" guides) with a minimal number of clicks. This fosters a visceral sense of efficiency, user control, and ease of use, reducing potential overwhelm for newcomers (A2 User Need: "Easy to find information" from personas like Shihao Wu or Nguyen Van Cuong). A well-organized navigation contributes significantly to the perception of a trustworthy and professional platform (Reflective Design considerations on Trust)).
+                    </li>
+                </ul>
+                <p class="annotation mt-3"><strong>Annotation:</strong> A clear, predictable, and easily parsable navigation structure is paramount for a positive visceral response. By leveraging familiar UI patterns (top bar for desktop, hamburger menu for mobile) and a logical information hierarchy derived from the <a href="site_map.html">Site Map</a> (which was meticulously informed by A2 user needs analysis and persona interviews), the design aims to make users feel confident and comfortable navigating the "Global Roots Community" website from their very first interaction. This directly supports the client's overarching goal for an accessible, user-centered, and empowering platform (A2 Client Goals). The consistent application of these navigation principles also adheres to WCAG guidelines for navigability (e.g., WCAG 2.1.1 Keyboard, WCAG 2.4.7 Focus Visible, WCAG 3.2.3 Consistent Navigation), reinforcing a visceral sense of quality, care, and reliability.</p>
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="site-footer-placeholder">
+        <p>&copy; 2025 Global Roots Community. A3 Style Guide.</p>
+    </footer>
+
+    <script type="module" src="js/visceral_design.js" defer></script> </body>
+</html>

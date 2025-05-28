@@ -1,0 +1,142 @@
+/* CSS Reset - Generated based on the prompt for a blank slate including animations */
+
+/* Resetting margins, padding, and borders for all elements */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; /* Apply border-box sizing universally */
+    vertical-align: baseline; /* Reset vertical alignment */
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+/* Set core body defaults */
+body {
+    line-height: 1; /* Reset line height */
+    -webkit-font-smoothing: antialiased; /* Improve font rendering on WebKit */
+    -moz-osx-font-smoothing: grayscale; /* Improve font rendering on Firefox */
+}
+
+/* Reset list styles */
+ol,
+ul {
+    list-style: none;
+}
+
+/* Reset quotes */
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: "";
+    content: none;
+}
+
+/* Reset table styles */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Reset anchor (link) styles */
+a {
+    text-decoration: none; /* Remove underlines */
+    color: inherit; /* Inherit text color from parent */
+}
+
+/* Reset font styles (force inheritance) */
+html {
+    font-size: 100%; /* Use the browser's default font size */
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: inherit; /* Inherit font family */
+    font-size: inherit; /* Inherit font size */
+    font-weight: inherit; /* Inherit font weight */
+    line-height: inherit; /* Inherit line height */
+    color: inherit; /* Inherit text color */
+}
+
+/* Reset heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1em; /* Reset font size to be the same as body text */
+    font-weight: normal; /* Reset font weight */
+}
+
+/* Reset form elements appearance */
+button,
+input,
+select,
+textarea {
+    background-color: transparent;
+    border-style: none;
+    color: inherit;
+    appearance: none; /* Remove default system appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+button {
+    cursor: pointer; /* Add pointer cursor to buttons */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resize, disable horizontal */
+}
+
+/* Reset media elements */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block; /* Make media elements block-level */
+    max-width: 100%; /* Prevent media elements from overflowing their container */
+}
+
+/* Reset animations and transitions for all elements */
+*,
+*::before,
+*::after {
+    animation: none !important;
+    transition: none !important;
+    transition-duration: 0s !important;
+    animation-duration: 0s !important;
+    animation-iteration-count: 1 !important; /* Ensure animations run only once if somehow triggered */
+    scroll-behavior: auto !important; /* Reset smooth scrolling */
+}
+
+/* Ensure hidden elements are truly hidden */
+[hidden] {
+    display: none !important;
+}

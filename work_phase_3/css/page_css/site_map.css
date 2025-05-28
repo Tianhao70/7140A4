@@ -1,0 +1,257 @@
+/* css/page_css/site_map.css */
+
+.sitemap-container .page-header.sitemap-header {
+    text-align: center;
+    margin-bottom: var(--space-lg, 1.5rem);
+}
+.sitemap-container .page-header.sitemap-header h1 {
+    color: var(--color-primary, #2D5F34); /* Consistent with visceral definition */
+    margin-bottom: var(--space-md, 1rem);
+}
+.sitemap-container .intro-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary, #6C757D);
+    max-width: 80ch;
+    margin: 0 auto var(--space-lg, 1.5rem) auto;
+}
+
+.sitemap-visual-section {
+    margin-bottom: var(--space-lg, 1.5rem);
+    text-align: center;
+}
+.sitemap-visual-section .section-title {
+    font-size: var(--font-size-h2, 2rem);
+    color: var(--color-text);
+    margin-bottom: var(--space-sm, 0.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center title */
+}
+.sitemap-visual-section .section-title .icon-before {
+    margin-right: var(--space-sm, 0.5rem);
+    color: var(--color-primary); /* Or accent */
+}
+.sitemap-visual-section p {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-md, 1rem);
+}
+
+.sitemap-image-container {
+    margin: var(--space-md, 1rem) auto;
+    padding: var(--space-sm, 0.5rem);
+    border: 1px solid var(--color-background-subtle, #F2F2F2);
+    background-color: #fff;
+    display: inline-block; /* To center it if text-align:center is on parent */
+    max-width: 100%;
+}
+.sitemap-image-container .responsive-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--color-text-secondary, #ccc); /* Border around image */
+}
+.sitemap-image-container .image-caption {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    margin-top: var(--space-sm, 0.5rem);
+    font-style: italic;
+}
+
+.instruction-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: var(--space-md, 1rem);
+}
+
+/* --- Accordion Styling for Site Map --- */
+.sitemap-accordion .accordion-item {
+    margin-bottom: var(--space-sm, 0.5rem); /* Space between top-level items */
+    border: 1px solid var(--color-background-subtle, #F2F2F2); /* Softer border for items */
+    border-radius: var(--border-radius-md, 8px); /* Consistent rounded corners */
+    box-shadow: var(--box-shadow-light, 0 1px 3px rgba(0,0,0,0.05));
+}
+
+.sitemap-accordion .accordion-header {
+    display: flex; /* For icon alignment */
+    align-items: center;
+    width: 100%;
+    padding: var(--space-md, 1rem) var(--space-lg, 1.5rem); /* Generous padding */
+    font-weight: 700; /* Bolder headers */
+    font-size: 1.2rem; /* Slightly larger header text */
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid transparent; /* Transparent initially */
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.sitemap-accordion .accordion-header .icon-before {
+    margin-right: var(--space-md, 1rem); /* More space for icon */
+    font-size: 1em; /* Icon size relative to header text */
+    min-width: 20px; /* Ensure space for icon */
+}
+
+/* Top Level Accordion Headers */
+.sitemap-accordion > .accordion-item > .accordion-header.top-level-header {
+    background-color: var(--color-primary, #2D5F34); /* Visceral Design Primary Green */
+    color: white;
+    border-radius: var(--border-radius-md, 8px) var(--border-radius-md, 8px) 0 0; /* Round top corners if item is closed */
+}
+.sitemap-accordion > .accordion-item.open > .accordion-header.top-level-header {
+    border-radius: var(--border-radius-md, 8px) var(--border-radius-md, 8px) 0 0;
+    border-bottom-color: color-mix(in srgb, var(--color-primary, #2D5F34) 80%, black); /* Darker border when open */
+}
+.sitemap-accordion > .accordion-item > .accordion-header.top-level-header .icon-before {
+    color: var(--color-accent, #E67E22); /* Accent color for icons on primary background */
+}
+
+/* Nested Accordion Headers - Level 1 */
+.sitemap-accordion .accordion.nested > .accordion-item > .accordion-header.nested-header-1 {
+    background-color: var(--color-accent, #E67E22); /* Visceral Design Accent Orange */
+    color: white;
+    font-size: 1.1rem; /* Slightly smaller */
+    padding-left: var(--space-xl, 2rem); /* Indent first level nested */
+}
+.sitemap-accordion .accordion.nested > .accordion-item.open > .accordion-header.nested-header-1 {
+    border-bottom-color: color-mix(in srgb, var(--color-accent, #E67E22) 80%, black);
+}
+.sitemap-accordion .accordion.nested > .accordion-item > .accordion-header.nested-header-1 .icon-before {
+    color: var(--color-primary, #2D5F34); /* Primary color for icons on accent background */
+}
+
+
+/* Nested Accordion Headers - Level 2 (e.g., Settlement, Jobs under Topics) */
+.sitemap-accordion .accordion.nested .accordion.nested > .accordion-item > .accordion-header.nested-header-2 {
+    background-color: var(--color-background-subtle, #F2F2F2); /* Visceral Design Light Gray */
+    color: var(--color-text, #333333);
+    font-size: 1rem; /* Even smaller */
+    font-weight: 600;
+    padding-left: var(--space-xxl, 3rem); /* Further indent second level nested */
+    border-top: 1px solid var(--color-text-secondary, #ccc); /* Add top border for separation */
+}
+.sitemap-accordion .accordion.nested .accordion.nested > .accordion-item:first-child > .accordion-header.nested-header-2 {
+    border-top: none; /* No top border for the first item in a nested group */
+}
+.sitemap-accordion .accordion.nested .accordion.nested > .accordion-item.open > .accordion-header.nested-header-2 {
+    border-bottom-color: var(--color-text-secondary, #ccc);
+}
+.sitemap-accordion .accordion.nested .accordion.nested > .accordion-item > .accordion-header.nested-header-2 .icon-before {
+    color: var(--color-primary, #2D5F34);
+}
+
+
+.sitemap-accordion .accordion-header:hover,
+.sitemap-accordion .accordion-header:focus {
+    opacity: 0.9;
+    outline: 2px solid var(--color-secondary, #E67E22); /* Use accent for focus outline generally */
+    outline-offset: 2px;
+}
+.sitemap-accordion > .accordion-item > .accordion-header.top-level-header:hover,
+.sitemap-accordion > .accordion-item > .accordion-header.top-level-header:focus {
+    background-color: color-mix(in srgb, var(--color-primary, #2D5F34) 90%, black);
+    outline-color: var(--color-accent, #E67E22);
+}
+.sitemap-accordion .accordion.nested > .accordion-item > .accordion-header.nested-header-1:hover,
+.sitemap-accordion .accordion.nested > .accordion-item > .accordion-header.nested-header-1:focus {
+    background-color: color-mix(in srgb, var(--color-accent, #E67E22) 90%, black);
+    outline-color: var(--color-primary, #2D5F34);
+}
+.sitemap-accordion .accordion.nested .accordion.nested > .accordion-item > .accordion-header.nested-header-2:hover,
+.sitemap-accordion .accordion.nested .accordion.nested > .accordion-item > .accordion-header.nested-header-2:focus {
+    background-color: var(--color-text-secondary, #e0e0e0); /* Darken subtle background on hover */
+    outline-color: var(--color-primary, #2D5F34);
+}
+
+/* Content Area Styling */
+.sitemap-accordion .accordion-content {
+    /* REMOVED fixed max-height: 0; from here, it's handled by skeleton */
+    /* overflow: hidden; MUST be handled by skeleton for JS height calc */
+    padding: 0 var(--space-lg, 1.5rem); /* Horizontal padding when closed */
+    background: white;
+    /* transition handled by skeleton */
+    border-top: 1px solid var(--color-text-secondary, #ccc); /* Default top border for content */
+}
+
+/* Remove top border if header below already has one (for open state) */
+.sitemap-accordion .accordion-item.open > .accordion-header + .accordion-content {
+    border-top: none;
+}
+
+/* Styling for the content panel when the item is open */
+.sitemap-accordion .accordion-item.open > .accordion-content {
+    /* !!! REMOVED THIS LINE: max-height: 1000px; !!! */
+    /* Let JS control max-height for dynamic content height */
+    padding: var(--space-lg, 1.5rem); /* Apply vertical and horizontal padding when open */
+    /* Ensure overflow is handled by skeleton's overflow-y: auto; */
+}
+
+/* Content within nested accordions */
+.sitemap-accordion .accordion.nested .accordion-content {
+    padding-left: var(--space-xl, 2rem); /* Indent content of nested-level-1 */
+}
+.sitemap-accordion .accordion.nested .accordion.nested .accordion-content {
+    padding-left: var(--space-xxl, 3rem); /* Further indent content of nested-level-2 */
+    background-color: var(--color-background-subtle, #F2F2F2); /* Slight bg for deeply nested content */
+}
+
+.annotation-block {
+    background-color: var(--color-background-subtle, #F2F2F2); /* Light background for annotations */
+    border: 1px dashed var(--color-text-secondary, #ccc);
+    padding: var(--space-md, 1rem);
+    margin-bottom: var(--space-md, 1rem); /* Space after each annotation block */
+    border-radius: var(--border-radius-sm, 4px);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+.annotation-block p {
+    margin-bottom: var(--space-sm, 0.5rem);
+    color: var(--color-text-secondary);
+}
+.annotation-block p:last-child {
+    margin-bottom: 0;
+}
+.annotation-block strong {
+    color: var(--color-text);
+    font-weight: 600;
+}
+.annotation-block a {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+.annotation-block a:hover {
+    text-decoration: none;
+}
+
+/* Ensure the last accordion item in a nested group doesn't have double bottom margin/padding */
+.sitemap-accordion .accordion.nested .accordion-item:last-child .accordion-content {
+    margin-bottom: 0;
+}
+
+/* Footer placeholder */
+.site-footer-placeholder {
+    text-align: center;
+    padding: var(--space-lg, 1.5rem);
+    background-color: var(--color-dark, #333); /* Make sure --color-dark is defined in base.css */
+    color: var(--color-background, #FFF); /* Adjust text color for dark background */
+    margin-top: var(--space-xxl, 3rem);
+}
+/* --- Added rules to improve accordion icon contrast --- */
+
+/* Set icon color to white for dark green and orange headers */
+.sitemap-accordion > .accordion-item > .accordion-header.top-level-header::after,
+.sitemap-accordion .accordion.nested > .accordion-item > .accordion-header.nested-header-1::after {
+    color: white; /* White provides high contrast against dark green and orange */
+}
+
+/* Set icon color to a darker gray for light gray headers */
+.sitemap-accordion .accordion.nested .accordion.nested > .accordion-item > .accordion-header.nested-header-2::after {
+    /* Using the main text color for better contrast on light gray background */
+    color: var(--color-text, #333333); 
+    /* Alternatively, if the secondary gray was acceptable, you could use: */
+    /* color: var(--color-text-secondary, #6C757D); */
+}
+
+/* --- End of added rules --- */

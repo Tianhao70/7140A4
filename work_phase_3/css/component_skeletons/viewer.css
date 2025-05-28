@@ -1,0 +1,65 @@
+/* css/component_skeletons/viewer.css */
+
+#viewer {
+    position: fixed; /* Fixed position relative to viewport */
+    top: 0;
+    right: 0;
+    width: 80%; /* Viewer width on mobile */
+    height: 100vh; /* Full viewport height */
+    background-color: var(--color-background-subtle); /* Use a subtle background */
+    padding: 1rem 1.5rem; /* Inner padding */
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.15); /* Shadow on the left edge */
+    z-index: 1000; /* Ensure viewer is above most other content (adjust if needed based on nav z-index) */
+    overflow-y: auto; /* Allow vertical scrolling if content is tall */
+
+    /* Initially hidden off-screen to the right */
+    transform: translateX(100%);
+    transition: transform 0.35s ease-in-out; /* Smooth slide transition */
+}
+
+#viewer.open {
+    /* Slide into view when 'open' class is added */
+    transform: translateX(0%);
+}
+
+#close-viewer {
+    background: none;
+    border: none;
+    font-size: 1.8rem; /* Larger close button */
+    font-weight: bold;
+    line-height: 1;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    padding: 0.2rem 0.5rem;
+    float: right; /* Position to the top right */
+    margin-bottom: 0.5rem;
+}
+
+#close-viewer:hover,
+#close-viewer:focus {
+    color: var(--color-text);
+}
+
+#viewer-img {
+    display: block;
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 1rem; /* Space above image */
+    margin-bottom: 1rem; /* Space below image */
+    border: 1px solid var(--color-text-secondary);
+}
+
+#viewer-caption {
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--color-text);
+    clear: both; /* Clear the float from the close button */
+}
+
+/* Desktop Styles for Viewer */
+@media screen and (min-width: 768px) {
+    #viewer {
+        width: 50%; /* Narrower viewer on desktop */
+    }
+}

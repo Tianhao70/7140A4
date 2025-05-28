@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/base.css" /> <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/page_css/site_map.css" /> <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Site Map - Global Roots Community Design Proposal</title>
+</head>
+<body>
+    <nav id="nav-mobile" aria-label="Main Navigation">
+        <ul>
+            <li><a href="index.html"><span class="icon"><i class="fas fa-home" aria-hidden="true"></i></span><span class="nav-text-mobile">Home</span></a></li>
+            <li><a href="site_map.html" aria-current="page"><span class="icon"><i class="fas fa-sitemap" aria-hidden="true"></i></span><span class="nav-text-mobile">Site Map</span></a></li>
+            <li><a href="style_guide.html"><span class="icon"><i class="fas fa-palette" aria-hidden="true"></i></span><span class="nav-text-mobile">Style Guide</span></a></li>
+            <li><a href="ethical_response.html"><span class="icon"><i class="fas fa-balance-scale" aria-hidden="true"></i></span><span class="nav-text-mobile">Ethics</span></a></li>
+            <li><a href="genai_mt_acknowledgement.html"><span class="icon"><i class="fas fa-robot" aria-hidden="true"></i></span><span class="nav-text-mobile">GenAI</span></a></li>
+        </ul>
+    </nav>
+
+    <nav id="nav-desktop" aria-label="Main Navigation">
+        <ul>
+            <li><a href="index.html">WP3 Home</a></li>
+            <li><a href="site_map.html" aria-current="page">Site Map</a></li>
+            <li><a href="style_guide.html">Style Guide</a></li>
+            <li><a href="ethical_response.html">Ethics Response</a></li>
+            <li><a href="genai_mt_acknowledgement.html">GenAI</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container sitemap-container">
+            <header class="page-header sitemap-header">
+                <h1>Proposed "Global Roots Community" Site Map</h1>
+                <p class="intro-text">This page presents the proposed information architecture for the <strong>"Global Roots Community"</strong> website. The structure is derived from extensive user research (A2 Persona Interviews, User Stories) and client needs analysis (A2 Client Needs Analysis), aiming to provide comprehensive support and resources for international communities settling in Australia. The sitemap aims to be intuitive, user-centered, and facilitate easy navigation to key resources and community features, aligning with A2 Project Goal 2 ("Accessible Information & Resource Hub").</p>
+            </header>
+
+            <section class="sitemap-visual-section">
+                <h2 class="section-title"><i class="fas fa-project-diagram icon-before" aria-hidden="true"></i>Visual Overview</h2>
+                <p>The following diagram provides a visual overview of the primary navigation sections and their relationships. Click on the interactive sections below the diagram for detailed annotations on each page's purpose, key features, user/client need alignment, and accessibility considerations.</p>
+                <figure class="sitemap-image-container">
+                    <img src="assets/Sitemap.png" class="responsive-img my-4" alt="Sitemap flowchart for the proposed Global Roots Community website. Top-level sections are Home, Community, Accessibility, About Us, and Log In. 'Community' expands into 'Topics' (with sub-categories like Settlement, Jobs, Study Apply, College Life), 'Latest Replies', 'Create New Post', and 'My Post'. 'Accessibility' includes Language Support, Visual, Auditory, Keyboard Navigation, and Feedback. 'About Us' includes Mission, Team, Join, Contact, Report Problem, FAQ. 'Log In' covers Sign up, Email/Password Login, Forgot Password, and Third-Party Logins.">
+                    <figcaption class="image-caption">Visual representation of the Global Roots Community sitemap structure.</figcaption>
+                </figure>
+            </section>
+
+            <p class="mt-3 instruction-text">Use the interactive accordion sections below to explore the planned structure and detailed annotations for each part of the website:</p>
+
+            <section class="accordion sitemap-accordion my-5">
+                <div class="accordion-item">
+                    <button class="accordion-header top-level-header"><i class="fas fa-comments icon-before" aria-hidden="true"></i>Community</button>
+                    <div class="accordion-content">
+                        <div class="annotation-block">
+                            <p><strong>Purpose:</strong> To serve as the central hub for user interaction, peer-to-peer support, and experience sharing among international students and newcomers.</p>
+                            <p><strong>Key Features:</strong> Discussion forums categorized by topics (Topics), a feed for latest replies, functionality to create new posts, and a section for users to manage their own posts.</p>
+                            <p><strong>User/Client Need Alignment:</strong> Addresses A2 Client Value 1 ("Promote Social Cohesion & Belonging") and A2 Project Goal 3 ("Meaningful Connections & Support Network"). Directly supports user stories from personas like Shihao Wu (seeking peer advice on practical tasks), Rajesh Kumar (professional networking), and Isabella Rossi (connecting with cultural community).</p>
+                            <p><strong>Accessibility Considerations:</strong> Clear navigation to sub-sections. Content within posts will adhere to readability guidelines (WCAG 3.1.5). User-generated content will have reporting mechanisms for inappropriate content. Forms for creating posts will be fully accessible (WCAG 3.3.2).</p>
+                        </div>
+                        <div class="accordion nested">
+                            <div class="accordion-item open">
+                                <button class="accordion-header nested-header-1"><i class="fas fa-list-alt icon-before" aria-hidden="true"></i>Topics</button>
+                                <div class="accordion-content">
+                                    <div class="annotation-block">
+                                        <p><strong>Purpose:</strong> To provide categorized forums where users can share experiences, ask questions, and find information related to specific aspects of life in Australia.</p>
+                                        <p><strong>Key Features:</strong> Threaded discussions, search within topics, ability to follow topics, user profiles linked to contributions.</p>
+                                        <p><strong>User/Client Need Alignment:</strong> Addresses the need for targeted information sharing expressed by all A2 personas (e.g., Shihao on renting/banking, Nguyen on job market/CVs, Isabella on family settlement/partner's employment). Supports A2 Client Focus Area: "Settling In," "Employment," "Connection".</p>
+                                        <p><strong>Accessibility Considerations:</strong> Clear heading structure for topic threads (WCAG 1.3.1). Sufficient contrast for text and UI elements within topic lists and posts (WCAG 1.4.3, 1.4.11). Consistent layout for scannability (WCAG 3.2.4).</p>
+                                    </div>
+                                    <div class="accordion nested">
+                                        <div class="accordion-item open">
+                                            <button class="accordion-header nested-header-2"><i class="fas fa-house-user icon-before" aria-hidden="true"></i>Settlement</button>
+                                            <div class="accordion-content">
+                                                <div class="annotation-block"><p>Discussions on housing, banking, transport, etc. Addresses Shihao's and Nguyen's need for practical settlement advice.</p></div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item open">
+                                            <button class="accordion-header nested-header-2"><i class="fas fa-briefcase icon-before" aria-hidden="true"></i>Jobs</button>
+                                            <div class="accordion-content">
+                                                <div class="annotation-block"><p>Discussions and resources on finding employment, CV writing, interview skills. Addresses needs of Rajesh, Nguyen, and Isabella (for partner).</p></div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item open">
+                                            <button class="accordion-header nested-header-2"><i class="fas fa-user-graduate icon-before" aria-hidden="true"></i>Study Apply</button>
+                                            <div class="accordion-content">
+                                                <div class="annotation-block"><p>Discussions about applying to study programs, scholarships, and academic life for prospective and current international students (A2 Target Audience).</p></div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item open">
+                                            <button class="accordion-header nested-header-2"><i class="fas fa-university icon-before" aria-hidden="true"></i>College Life</button>
+                                            <div class="accordion-content">
+                                                <div class="annotation-block"><p>Sharing experiences and tips about student life, campus activities, and balancing studies, relevant to Shihao Wu.</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item open">
+                                <button class="accordion-header nested-header-1"><i class="fas fa-reply-all icon-before" aria-hidden="true"></i>Latest Replies</button>
+                                <div class="accordion-content">
+                                    <div class="annotation-block"><p><strong>Purpose:</strong> Allows users to quickly see the most recent activity across all discussion topics. Features: Chronological feed of replies with links to the original post. Addresses user need to stay updated on active discussions. Accessibility: Links will have clear purpose (WCAG 2.4.4).</p></div>
+                                </div>
+                            </div>
+                            <div class="accordion-item open">
+                                <button class="accordion-header nested-header-1"><i class="fas fa-plus-circle icon-before" aria-hidden="true"></i>Create New Post</button>
+                                <div class="accordion-content">
+                                    <div class="annotation-block"><p><strong>Purpose:</strong> Interface for users to initiate new discussions or share experiences. Features: Rich text editor (TBD), topic selection, anonymous posting option (ethical consideration). Supports A2 User Story of sharing advice. Accessibility: Form will be WCAG compliant (labels, error handling WCAG 3.3.1, 3.3.2).</p></div>
+                                </div>
+                            </div>
+                            <div class="accordion-item open">
+                                <button class="accordion-header nested-header-1"><i class="fas fa-user-edit icon-before" aria-hidden="true"></i>My Post</button>
+                                <div class="accordion-content">
+                                    <div class="annotation-block"><p><strong>Purpose:</strong> Allows users to view, manage, and edit posts they have created. Features: List of user's posts, edit/delete options. Supports user control and content management. Accessibility: Clear indicators for editable content and actionable items.</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header top-level-header"><i class="fas fa-universal-access icon-before" aria-hidden="true"></i>Accessibility</button>
+                    <div class="accordion-content">
+                        <div class="annotation-block">
+                            <p><strong>Purpose:</strong> To provide users with tools and information to customize their experience and ensure the platform is usable by people with diverse abilities.</p>
+                            <p><strong>Key Features:</strong> Options for language selection, visual adjustments (contrast, font size), auditory support information, keyboard navigation guides, and a feedback mechanism for accessibility issues.</p>
+                            <p><strong>User/Client Need Alignment:</strong> Directly addresses A2 Client Brief requirement ("Accessibility must be prioritised") and A2 Project Goal 4 ("Ethical, Inclusive & Sensitive Design"). Caters to users like Nguyen Van Cuong needing language support and general WCAG 2.2 AA compliance.</p>
+                            <p><strong>Accessibility Considerations:</strong> This entire section is dedicated to accessibility. Each sub-page will itself be highly accessible and clearly explain its features.</p>
+                        </div>
+                        <div class="accordion nested">
+                            <div class="accordion-item open">
+                                <button class="accordion-header nested-header-1"><i class="fas fa-language icon-before" aria-hidden="true"></i>Language Support</button>
+                                <div class="accordion-content">
+                                    <div class="annotation-block"><p>Options for users to select preferred language for key content, addressing Nguyen's and Isabella's need. WCAG 3.1.2 Language of Parts.</p></div>
+                                </div>
+                            </div>
+                            <div class="accordion-item open">
+                                <button class="accordion-header nested-header-1"><i class="fas fa-eye icon-before" aria-hidden="true"></i>Visual Accessibility</button>
+                                <div class="accordion-content">
+                                    <div class="annotation-block"><p>Settings for contrast modes, font size adjustments (WCAG 1.4.4 Resize text), and text spacing options to assist users with visual impairments. Supports A2 Client Need 10 (WCAG Compliance).</p></div>
+                                </div>
+                            </div>
+                            <div class="accordion-item open">
+                                <button class="accordion-header nested-header-1"><i class="fas fa-assistive-listening-systems icon-before" aria-hidden="true"></i>Auditory Accessibility</button>
+                                <div class="accordion-content">
+                                    <div class="annotation-block"><p>Information on and provision of transcripts or captions for any multimedia content (WCAG 1.2.1, 1.2.2, 1.2.3).</p></div>
+                                </div>
+                            </div>
+                            <div class="accordion-item open">
+                                <button class="accordion-header nested-header-1"><i class="fas fa-keyboard icon-before" aria-hidden="true"></i>Keyboard Navigation</button>
+                                <div class="accordion-content">
+                                    <div class="annotation-block"><p>Guidance and features ensuring the site is fully navigable using only a keyboard (WCAG 2.1.1 Keyboard).</p></div>
+                                </div>
+                            </div>
+                            <div class="accordion-item open">
+                                <button class="accordion-header nested-header-1"><i class="fas fa-comment-dots icon-before" aria-hidden="true"></i>Accessibility Feedback</button>
+                                <div class="accordion-content">
+                                    <div class="annotation-block"><p>A dedicated mechanism for users to report accessibility barriers or provide suggestions for improvement.</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header top-level-header"><i class="fas fa-info-circle icon-before" aria-hidden="true"></i>About Us</button>
+                    <div class="accordion-content">
+                        <div class="annotation-block">
+                            <p><strong>Purpose:</strong> To provide transparency about the "Global Roots Community" initiative, its mission, and the team behind it, fostering trust.</p>
+                            <p><strong>Key Features:</strong> Mission statement, team information, contact details, problem reporting, FAQ.</p>
+                            <p><strong>User/Client Need Alignment:</strong> Builds trust (A2 Client Need 6: Safe & Trustworthy Space) and provides essential contact/support channels. Important for users like Rajesh Kumar who value transparency.</p>
+                            <p><strong>Accessibility Considerations:</strong> Clear, concise language (WCAG 3.1.5). Easily findable contact information.</p>
+                        </div>
+                        <div class="accordion nested">
+                            <div class="accordion-item open">
+                                <button class="accordion-header nested-header-1">Our Mission</button>
+                                <div class="accordion-content">
+                                    <div class="annotation-block"><p>Statement outlining the purpose and goals of the website.</p></div>
+                                </div>
+                            </div>
+                            <div class="accordion-item open">
+                                <button class="accordion-header nested-header-1">Our Team</button>
+                                <div class="accordion-content">
+                                    <div class="annotation-block"><p>Information about the individuals or organization behind the site (linking to real-world presence supports trust, a Reflective Design principle).</p></div>
+                                </div>
+                            </div>
+                            <div class="accordion-item open">
+                                <button class="accordion-header nested-header-1">Join Our Team</button>
+                                <div class="accordion-content">
+                                    <div class="annotation-block"><p>Details on potential volunteer or employment opportunities.</p></div>
+                                </div>
+                            </div>
+                            <div class="accordion-item open">
+                                <button class="accordion-header nested-header-1">Contact Us</button>
+                                <div class="accordion-content">
+                                    <div class="annotation-block"><p>Provides clear ways for users to get in touch with site administrators.</p></div>
+                                </div>
+                            </div>
+                            <div class="accordion-item open">
+                                <button class="accordion-header nested-header-1">Report A Problem</button>
+                                <div class="accordion-content">
+                                    <div class="annotation-block"><p>A dedicated interface for users to report technical issues or content errors, supporting usability.</p></div>
+                                </div>
+                            </div>
+                            <div class="accordion-item open">
+                                <button class="accordion-header nested-header-1">FAQ</button>
+                                <div class="accordion-content">
+                                    <div class="annotation-block"><p>Answers to common questions about the website and its services, reducing support load and aiding user understanding.</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header top-level-header"><i class="fas fa-sign-in-alt icon-before" aria-hidden="true"></i>Log In / User Accounts</button>
+                    <div class="accordion-content">
+                        <div class="annotation-block">
+                            <p><strong>Purpose:</strong> To manage user authentication, allowing access to personalized features like "My Post" and "Create New Post".</p>
+                            <p><strong>Key Features:</strong> New user sign-up, email/password login, forgot password recovery, and third-party login options.</p>
+                            <p><strong>User/Client Need Alignment:</strong> Essential for any community platform requiring user contributions and personalization. Offering multiple login methods caters to user preferences for convenience (A2 User Story derived from Isabella's interview about family preferences).</p>
+                            <p><strong>Accessibility Considerations:</strong> All forms will be WCAG compliant (labels, error handling, keyboard access). Secure password practices will be encouraged. Clear instructions for all processes (WCAG 3.3.2).</p>
+                        </div>
+                        <div class="accordion nested">
+                            <div class="accordion-item open">
+                                <button class="accordion-header nested-header-1">Sign up</button>
+                                <div class="accordion-content">
+                                    <div class="annotation-block"><p>The process for new users to register for an account. Will require minimal data initially (ethical consideration for data minimization).</p></div>
+                                </div>
+                            </div>
+                            <div class="accordion-item open">
+                                <button class="accordion-header nested-header-1">Email/Password Login</button>
+                                <div class="accordion-content">
+                                    <div class="annotation-block"><p>Standard login interface using registered email and password.</p></div>
+                                </div>
+                            </div>
+                            <div class="accordion-item open">
+                                <button class="accordion-header nested-header-1">Forgot Password</button>
+                                <div class="accordion-content">
+                                    <div class="annotation-block"><p>Mechanism for users to securely reset their forgotten password.</p></div>
+                                </div>
+                            </div>
+                            <div class="accordion-item open">
+                                <button class="accordion-header nested-header-1">Third-Party Login</button>
+                                <div class="accordion-content">
+                                    <div class="annotation-block"><p>Allows users to log in/sign up using existing accounts from trusted external providers, reducing friction.</p></div>
+                                    <div class="accordion nested">
+                                        <div class="accordion-item open">
+                                            <button class="accordion-header nested-header-2">Google Login</button>
+                                            <div class="accordion-content">
+                                                <div class="annotation-block"><p>Authenticate using an existing Google account.</p></div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item open">
+                                            <button class="accordion-header nested-header-2">Apple Login</button>
+                                            <div class="accordion-content">
+                                                <div class="annotation-block"><p>Authenticate using an existing Apple ID.</p></div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item open">
+                                            <button class="accordion-header nested-header-2">Facebook Login</button>
+                                            <div class="accordion-content">
+                                                <div class="annotation-block"><p>Authenticate using an existing Facebook account.</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer-placeholder">
+        <p>&copy; 2025 Global Roots Community. A3 Design Proposal.</p>
+    </footer>
+
+    <script type="module" src="js/site_map.js" defer></script>
+</body>
+</html>
